@@ -18,10 +18,10 @@ const Hero = () => {
             algorithm in python.
           </p>
 
-          <button className="bg-prim-900 py-2 px-7 rounded-lg hover:px-8 hover:bg-prim-500 transition-all">
+          <button className="bg-prim-900 py-2 px-7 rounded-3xl hover:bg-prim-500 transition-all">
             See More
           </button>
-          <button className="text-prim-900 py-2 px-7 rounded-lg hover:px-8 hover:bg-prim-900 border border-prim m-5 hover:text-white-800 transition-all">
+          <button className="text-prim-900 py-2 px-7 rounded-3xl hover:px-8 hover:bg-prim-900 border-[3px] border-prim m-5 hover:text-white-800 transition-all">
             Contact me
           </button>
         </div>
