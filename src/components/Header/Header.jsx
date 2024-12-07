@@ -1,10 +1,11 @@
 import NavBars from "./NavBars";
 const Header = () => {
   return (
-    <div className=" p-6 px-16 flex justify-between items-center text-gray-200 text-[18px]">
-      <div className="font-extrabold text-3xl hover:text-gray-500 transition-all">Melkie</div>
+    <div className=" p-4 px-16 flex justify-between items-center text-gray-200 text-[18px] fixed right-0 left-0 top-0 bg-[#0a0a24] z-50">
+      <div className="font-extrabold text-[#22ff34] border border-[#22ff34] rounded-md px-3 py-2 text-3xl hover:bg-[#22ff34] hover:text-black-300 transition-all hover:transition-all cursor-pointer">
+        Melkie
+      </div>
       <NavBars />
-      <div className="p-2 rounded-2xl shadow-2xl text-[1.5rem] bg-slate-700">⬆️</div>
     </div>
   );
 };
