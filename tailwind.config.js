@@ -5,6 +5,10 @@ export default {
     extend: {
       fontFamily: {
         generalsans: ["General Sans", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        opensans: ["Open Sans", "sans-serif"],
       },
       colors: {
         black: {
@@ -23,13 +27,13 @@ export default {
           500: "#62646C",
         },
         prim: {
-          DEFAULT: "#22ff34",
-          900: "#01e414",
-          500: "#5eff6c",
+          DEFAULT: "#94FC13",
+          900: "#94FC13",
+          500: "#A2FF2F",
+          300: "#C0FF73",
+          200: "#E2FFBF",
+          100: "#F4FFE6",
         },
-      },
-      backgroundImage: {
-        terminal: "url('/assets/terminal.png')",
       },
     },
   },
