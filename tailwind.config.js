@@ -9,6 +9,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
+        tas: ["Edu TAS Beginner", "sans-serif"],
       },
       colors: {
         black: {
@@ -26,7 +27,7 @@ export default {
           600: "#AFB0B6",
           500: "#62646C",
         },
-        prim: {
+        primary: {
           DEFAULT: "#94FC13",
           900: "#94FC13",
           500: "#A2FF2F",
