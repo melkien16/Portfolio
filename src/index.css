@@ -1,9 +1,9 @@
 @import url("https://fonts.cdnfonts.com/css/general-sans");
-@import url('https://fonts.cdnfonts.com/css/roboto');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-@import url('https://fonts.cdnfonts.com/css/montserrat');
-@import url('https://fonts.cdnfonts.com/css/open-sans');
-@import url('https://fonts.cdnfonts.com/css/edu-tas-beginner');
+@import url("https://fonts.cdnfonts.com/css/roboto");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/montserrat");
+@import url("https://fonts.cdnfonts.com/css/open-sans");
+@import url("https://fonts.cdnfonts.com/css/edu-tas-beginner");
 
 @tailwind base;
 @tailwind components;
@@ -18,7 +18,9 @@ body {
   font-family: "roboto", sans-serif;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.97);
-  padding: 70px;
+}
+.bg {
+  background: linear-gradient(180deg, #121212 0%, #1e1e1e 100%);
 }
 .nav-list::after {
   content: "";
@@ -27,7 +29,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #94FC13;
+  background: #94fc13;
   transition: 0.15s;
 }
 
