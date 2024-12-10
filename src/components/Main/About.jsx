@@ -5,15 +5,17 @@ import IMG4 from "../../assets/04.jpg";
 
 const About = () => {
   return (
-    <div className="p-28">
-      <h1 className="about-text">About</h1>
-      <div className="w-full h-[1px] bg-gray-800 my-3"></div>
-
-      <div className="flex">
-        <div className="flex justify-start gap-6">
+    <div className="px-28 py-20 text-white-700">
+      <h1 className="about-text m-3 relative inline-block hover:text-white-500 transition-all">
+        About
+      </h1>
+      <div className="flex justify-center my-12">
+        <div className="flex justify-start gap-9">
           <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold">Who I Am</h1>
-            <p>
+            <h1 className="my-3 text-3xl font-bold about-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
+              Who I Am
+            </h1>
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
               I’m Melkie, a 3rd year Information System Student and dedicated
               Full-Stack Web Developer passionate about creating impactful and
               scalable solutions and a dedicated learner of data structures and
@@ -22,23 +24,39 @@ const About = () => {
             </p>
           </div>
           <div className="flex items-center flex-col z-40">
-            <div className="w-3 h-3 bg-prim rounded-full shadow-line"></div>
-            <div className="w-[3px] bg-prim h-3/4 shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
         </div>
-        <img className="w-1/2" src={IMG} width={600} alt="Image" />
+        <img
+          className="w-1/2"
+          src={IMG}
+          width={600}
+          alt="Image"
+          loading={"lazy"}
+        />
       </div>
 
-      <div className="flex">
-        <img className="w-1/2" src={IMG2} width={600} alt="Image" />
-        <div className="flex justify-center gap-6">
+      <div className="flex justify-center my-12">
+        <img
+          className="w-1/2"
+          src={IMG2}
+          width={600}
+          alt="Image"
+          loading={"lazy"}
+        />
+        <div className="flex justify-center gap-9">
           <div className="flex items-center flex-col z-40">
-            <div className="w-3 h-3 bg-prim rounded-full shadow-line z-50"></div>
-            <div className="w-[3px] bg-prim h-3/4 shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line z-50"></div>
+            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
           <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold">What Drives Me</h1>
-            <p>
+            <h1 className="my-3 text-3xl font-bold about-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
+              What Drives Me
+            </h1>
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
               Curiosity and innovation are at the heart of my journey. I thrive
               on mastering emerging technologies, solving complex challenges,
               and collaborating with others to build systems that truly make a
@@ -48,11 +66,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex">
-        <div className="flex justify-start gap-6">
+      <div className="flex justify-center my-12">
+        <div className="flex justify-start gap-9">
           <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold">My Mission</h1>
-            <p>
+            <h1 className="my-3 text-3xl font-bold about-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
+              My Mission
+            </h1>
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
               My mission is to empower organizations by delivering solutions
               that amplify their growth and solve real-world problems. I’m
               particularly driven to create impactful systems for businesses and
@@ -61,41 +81,54 @@ const About = () => {
             </p>
           </div>
           <div className="flex items-center flex-col z-40">
-            <div className="w-3 h-3 bg-prim rounded-full shadow-line"></div>
-            <div className="w-[3px] bg-prim h-3/4 shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
         </div>
-        <img className="w-1/2" src={IMG3} width={600} alt="Image" />
+        <img
+          className="w-1/2"
+          src={IMG3}
+          width={600}
+          alt="Image"
+          loading={"lazy"}
+        />
       </div>
 
-      <div className="flex">
-        <img className="w-1/2" src={IMG4} width={600} alt="Image" />
-        <div className="flex justify-center gap-6">
+      <div className="flex my-12">
+        <img
+          className="w-1/2"
+          src={IMG4}
+          width={600}
+          alt="Image"
+          loading={"lazy"}
+        />
+        <div className="flex justify-center gap-9">
           <div className="flex items-center flex-col ">
-            <div className="w-3 h-3 bg-prim rounded-full shadow-line"></div>
-            <div className="w-[3px] bg-prim h-3/4 shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
           <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold">
+            <h1 className="my-3 text-3xl font-bold about-title relative inline-block mb-8 hover:text-white-500 font-tas transition-all">
               Why Collaborate With Me?
             </h1>
-            <p>
-              <ul>
-                <li>
-                  <span className="font-bold italic">Committed</span>, Every
-                  project I take on is approached with precision and purpose
-                </li>
-                <li>
-                  <span className="font-bold italic">Collaborative</span>, I
-                  value teamwork and shared visions for success
-                </li>
-                <li>
-                  <span className="font-bold italic">Visionary</span>, I align
-                  my work with long-term goals, ensuring innovation and tangible
-                  results
-                </li>
-              </ul>
-            </p>
+
+            <ul className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
+              <li>
+                <span className="font-bold italic">Committed</span>, Every
+                project I take on is approached with precision and purpose
+              </li>
+              <li>
+                <span className="font-bold italic">Collaborative</span>, I value
+                teamwork and shared visions for success
+              </li>
+              <li>
+                <span className="font-bold italic">Visionary</span>, I align my
+                work with long-term goals, ensuring innovation and tangible
+                results
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -47,8 +47,9 @@ const Hero = () => {
   // });
 
   return (
-    <div className="bg mt-16 p-16 px-28 items-start justify-start bg-hero-pattern bg-cover bg-center font-poppins">
-      <div className="flex justify-start items-center h-[77vh]">
+    <div className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins">
+
+      <div className="flex justify-between items-center h-[77vh]">
         <div className="w-1/2 my-10">
           <h1 className="text-[2rem] font-bold mt-7">
             Hi, I&apos;m
@@ -69,16 +70,16 @@ const Hero = () => {
             Hire Me
           </button>
         </div>
-        <div className="">
-          <div className="absolute inset-0">
+        <div className="w-3/4 h-full flex items-start justify-start">
+          <div className="w-full h-full flex items-start justify-start">
             {/* <Leva /> */}
             <Canvas className="">
               <Suspense fallback={<CanvaLoader />}>
                 <PerspectiveCamera makeDefault position={[0, 0, 30]} />
                 <HeroCamera>
                   <ComputerHome
-                    scale={0.9}
-                    position={[10, -9.9, 0.3]}
+                    scale={1}
+                    position={[1, -9.3, 0.9]}
                     rotation={[-3.1, 3.7, 3.1]}
                     // scale={controls.scale}
                     // position={[
