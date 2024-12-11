@@ -45,22 +45,26 @@ body {
   width: 100%;
 }
 
-.about-text::after,
-.about-title::after {
+.sub-title::after,
+.main-title::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 100px;
   background: #94fc13;
   transition: 0.5s;
+  box-shadow: 0 0 5px #94fc13,
+              0 0 10px #94fc13,
+              0 0 15px #94fc13,
+              0 0 30px #94fc13;
 }
 
-.about-text:hover::after,
-.about-title:hover:after {
+.sub-title:hover::after,
+.main-title:hover:after {
   width: 100%;
   color: rgb(180, 180, 180);
 }
@@ -96,7 +100,7 @@ body {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
 
-  .about-text {
+  .main-title {
     @apply text-5xl font-bold ml-48;
   }
 }
@@ -122,4 +126,3 @@ body {
     0 0 20px rgb(0, 255, 0), 0 0 40px rgb(12, 185, 12),
     0 0 80px rgb(54, 255, 54);
 }
-
