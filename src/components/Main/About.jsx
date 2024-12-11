@@ -6,10 +6,11 @@ import IMG4 from "../../assets/04.jpg";
 const About = () => {
   return (
     <div className="px-28 py-20 text-white-700">
-      <h1 className="about-text m-3 relative inline-block hover:text-white-500 transition-all">
+      <h1 className="about-text m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">
         About
       </h1>
-      <div className="flex justify-center my-12">
+
+      <div className="flex justify-center my-12 motion-preset-blur-right motion-duration-2000">
         <div className="flex justify-start gap-9">
           <div className="w-[500px] mt-8">
             <h1 className="my-3 text-3xl font-bold about-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
@@ -38,7 +39,7 @@ const About = () => {
         />
       </div>
 
-      <div className="flex justify-center my-12">
+      <div className="flex justify-center my-12 motion-preset-blur-right motion-duration-2000">
         <img
           className="w-1/2"
           src={IMG2}
@@ -66,7 +67,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex justify-center my-12">
+      <div className="flex justify-center my-12 motion-preset-blur-right motion-duration-2000">
         <div className="flex justify-start gap-9">
           <div className="w-[500px] mt-8">
             <h1 className="my-3 text-3xl font-bold about-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
@@ -95,7 +96,7 @@ const About = () => {
         />
       </div>
 
-      <div className="flex my-12">
+      <div className="flex my-12 motion-preset-blur-right motion-duration-2000">
         <img
           className="w-1/2"
           src={IMG4}

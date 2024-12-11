@@ -48,12 +48,11 @@ const Hero = () => {
 
   return (
     <div className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins">
-
       <div className="flex justify-between items-center h-[77vh]">
         <div className="w-1/2 my-10">
           <h1 className="text-[2rem] font-bold mt-7">
             Hi, I&apos;m
-            <span className="text-6xl font-extrabold l px-4">Melkie</span>
+            <span className="text-6xl font-extrabold l px-4 hover:motion-preset-focus ">Melkie</span>
           </h1>
           <p className="mb-7 text-[24px] font-tas">
             Full-Stack Web Developer | Tech Enthusiast
