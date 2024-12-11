@@ -36,6 +36,9 @@ export default {
           200: "#E2FFBF",
           100: "#F4FFE6",
         },
+        helper: {
+          default: "#3D9561",
+        },
       },
     },
   },
