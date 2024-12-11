@@ -6,7 +6,7 @@ const Skills = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className="p-28">
+    <div className="p-28 pt-10">
       <h1 className="text-3xl font-bold mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all">
       Skills &amp; Technologies
       </h1>

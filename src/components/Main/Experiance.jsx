@@ -2,7 +2,7 @@ import Experiance from "./ExperianseList";
 
 const Skills = () => {
   return (
-    <div className="bg text-white py-16 px-8">
+    <div className="bg-black-300 text-white py-16 px-8">
       <h2 className="text-center text-4xl font-bold mb-12">Experience</h2>
       <div className="max-w-4xl mx-auto">
         {Experiance.map((exp, index) => (
