@@ -4,6 +4,8 @@ import ComputerHome from "./ComputerHome";
 import { Suspense } from "react";
 import CanvaLoader from "./CanvaLoader";
 import HeroCamera from "./HeroCamera";
+
+
 // import { Leva, useControls } from "leva";
 
 const Hero = () => {
@@ -47,12 +49,17 @@ const Hero = () => {
   // });
 
   return (
-    <div className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins" id="home">
+    <div
+      className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins"
+      id="home"
+    >
       <div className="flex justify-between items-center h-[77vh]">
         <div className="w-1/2 my-10">
           <h1 className="text-[2rem] font-bold mt-7">
             Hi, I&apos;m
-            <span className="text-6xl font-extrabold l px-4 hover:motion-preset-focus ">Melkie</span>
+            <span className="text-6xl font-extrabold l px-4 hover:motion-preset-focus ">
+              Melkie
+            </span>
           </h1>
           <p className="mb-7 text-[24px] font-tas">
             Full-Stack Web Developer | Tech Enthusiast
@@ -63,10 +70,10 @@ const Hero = () => {
           </p>
 
           <button className="bg-primary border-[3px] py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[3px] hover:text-primary-900 border-primary">
-            View Projects
+            <a href="#Projects">View Projects</a>
           </button>
           <button className="text-primary py-2 px-7 rounded-3xl hover:px-8 hover:bg-primary border-[3px] border-primary m-5 hover:text-white-800 transition-all">
-            Hire Me
+            <a href="#contact">Hire Me</a>
           </button>
         </div>
         <div className="w-3/4 h-full flex items-start justify-start">
