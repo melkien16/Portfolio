@@ -1,8 +1,19 @@
 import Experiance from "./ExperianseList";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <div className="bg-black-300 text-white py-16 px-8 exp-bg" id="Experience">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration:   1.5,
+        delay: 0.1,
+        ease: "easeInOut",
+      }}
+      className="bg-black-300 text-white py-16 px-8 exp-bg"
+      id="Experience"
+    >
       <h2 className="text-center text-4xl font-bold mb-12">Experience</h2>
       <div className="max-w-4xl mx-auto">
         {Experiance.map((exp, index) => (
@@ -28,7 +39,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

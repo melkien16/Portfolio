@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
 const Contact = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 1.5,
+        delay: 0.1,
+        ease: "easeInOut",
+      }}
       className="bg-black-200 p-28 pt-0 flex flex-col justify-center items-center "
       id="contact"
     >
@@ -39,7 +47,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

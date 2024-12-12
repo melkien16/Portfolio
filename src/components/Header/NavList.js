@@ -10,24 +10,25 @@ const NavList = [
     id: 2,
   },
   {
-    title: "Skills",
-    href: "Skills",
-    id: 5,
-  },
-  {
     title: 'Experience',
     href: 'Experience',
-    id: 5
+    id: 3
   },
+  {
+    title: "Skills",
+    href: "Skills",
+    id: 4,
+  },
+  
   {
     title: "Projects",
     href: "Projects",
-    id: 4,
+    id: 5,
   },
   {
     title: "Contact",
     href: "contact",
-    id: 3,
+    id: 6,
   },
 ];
 

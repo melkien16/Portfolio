@@ -2,10 +2,21 @@ import IMG from "../../assets/img2.jpg";
 import IMG2 from "../../assets/02.jpg";
 import IMG3 from "../../assets/03.png";
 import IMG4 from "../../assets/04.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="px-28 py-20 text-white-700" id="about">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 1.5,
+        delay: 0.1,
+        ease: "easeInOut",
+      }}
+      className="px-28 py-20 text-white-700"
+      id="about"
+    >
       <h1 className="main-title m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">
         About
       </h1>
@@ -133,7 +144,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

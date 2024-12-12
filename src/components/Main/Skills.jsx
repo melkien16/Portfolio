@@ -1,14 +1,25 @@
 import { useState } from "react";
 import "devicon/devicon.min.css";
 import { Languages, Frameworks, Tools } from "./SkillsAndTools";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className="p-28 pt-10" id="Skills">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 1.5,
+        delay: 0.1,
+        ease: "easeInOut",
+      }}
+      className="p-28 pt-10"
+      id="Skills"
+    >
       <h1 className="text-3xl font-bold mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all">
-      Skills &amp; Technologies
+        Skills &amp; Technologies
       </h1>
       <div className="grid grid-cols-3 gap-7">
         <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
@@ -147,7 +158,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,7 +4,7 @@ import ComputerHome from "./ComputerHome";
 import { Suspense } from "react";
 import CanvaLoader from "./CanvaLoader";
 import HeroCamera from "./HeroCamera";
-
+import { motion} from "framer-motion";
 
 // import { Leva, useControls } from "leva";
 
@@ -49,7 +49,14 @@ const Hero = () => {
   // });
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, scale: 0.99 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 1.5,
+        delay: 0.1,
+        ease: "easeInOut",
+      }}
       className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins"
       id="home"
     >
@@ -107,7 +114,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
