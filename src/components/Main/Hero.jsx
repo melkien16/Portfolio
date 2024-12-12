@@ -7,47 +7,7 @@ import HeroCamera from "./HeroCamera";
 import { motion } from "framer-motion";
 import IMG from "../../assets/exp.png";
 
-// import { Leva, useControls } from "leva";
-
 const Hero = () => {
-  // const controls = useControls("ComputerHome", {
-  //   positionX: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   positionY: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   positionZ: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-
-  //   rotationX: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   rotationY: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   rotationZ: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   scale: {
-  //     value: 2.5,
-  //     min: 0,
-  //     max: 10,
-  //   },
-  // });
 
   return (
     <motion.div
@@ -107,17 +67,6 @@ const Hero = () => {
                     scale={1}
                     position={[1, -9.3, 0.9]}
                     rotation={[-3.1, 3.7, 3.1]}
-                    // scale={controls.scale}
-                    // position={[
-                    //   controls.positionX,
-                    //   controls.positionY,
-                    //   controls.positionZ,
-                    // ]}
-                    // rotation={[
-                    //   controls.rotationX,
-                    //   controls.rotationY,
-                    //   controls.rotationZ,
-                    // ]}
                   />
                 </HeroCamera>
                 <ambientLight intensity={1} />
