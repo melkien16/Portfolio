@@ -4,7 +4,8 @@ import ComputerHome from "./ComputerHome";
 import { Suspense } from "react";
 import CanvaLoader from "./CanvaLoader";
 import HeroCamera from "./HeroCamera";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
+import IMG from "../../assets/exp.png";
 
 // import { Leva, useControls } from "leva";
 
@@ -57,12 +58,22 @@ const Hero = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins"
+      className="bg mt-16 lg:p-16 lg:px-28 px-6 flex items-center flex-col bg-cover bg-center font-poppins"
       id="home"
     >
-      <div className="flex justify-between items-center h-[77vh]">
-        <div className="w-1/2 my-10">
-          <h1 className="text-[2rem] font-bold mt-7">
+      <div className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-between items-center h-[77vh]">
+        <div className="lg:hidden absolute top-16 -z-10">
+          <img
+            src={IMG}
+            alt=""
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </div>
+        <div className="lg:w-1/2 my-14 md:m-6 md:my-10 flex flex-col justify-center items-center">
+          <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1">
             Hi, I&apos;m
             <span className="text-6xl font-extrabold l px-4 hover:motion-preset-focus ">
               Melkie
@@ -71,19 +82,21 @@ const Hero = () => {
           <p className="mb-7 text-[24px] font-tas">
             Full-Stack Web Developer | Tech Enthusiast
           </p>
-          <p className="mb-6">
+          <p className="mb-6 text-center">
             I craft innovative, scalable solutions that empower organizations to
             achieve their goals.
           </p>
 
-          <button className="bg-primary border-[3px] py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[3px] hover:text-primary-900 border-primary">
-            <a href="#Projects">View Projects</a>
-          </button>
-          <button className="text-primary py-2 px-7 rounded-3xl hover:px-8 hover:bg-primary border-[3px] border-primary m-5 hover:text-white-800 transition-all">
-            <a href="#contact">Hire Me</a>
-          </button>
+          <div>
+            <button className="bg-primary py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[2px] sm:hover:border-[3px] hover:text-primary-900 border-primary">
+              <a href="#Projects">View Projects</a>
+            </button>
+            <button className="text-primary py-2 px-7 rounded-3xl hover:px-8 hover:bg-primary border-[2px] sm:border-[3px] border-primary m-5 hover:text-white-800 transition-all">
+              <a href="#contact">Hire Me</a>
+            </button>
+          </div>
         </div>
-        <div className="w-3/4 h-full flex items-start justify-start">
+        <div className="hidden w-3/4 h-full lg:flex items-start justify-start">
           <div className="w-full h-full flex items-start justify-start">
             {/* <Leva /> */}
             <Canvas className="">
