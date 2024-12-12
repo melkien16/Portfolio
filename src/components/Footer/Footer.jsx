@@ -2,10 +2,10 @@ import "devicon/devicon.min.css";
 
 const Footer = () => {
   return (
-    <footer className="p-10 bg-black-300 text-white">
+    <footer className="p-10 bg-black-500 text-white">
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <h2 className="text-3xl font-bold text-[#8CED1F]">My Portfolio</h2>
+          <h2 className="text-3xl font-bold text-[#8CED1F]">Melkie Yilk</h2>
           <p className="mt-2 text-lg">
             © 2023 My Portfolio. All rights reserved.
           </p>
@@ -41,7 +41,7 @@ const Footer = () => {
 
         <div className="flex space-x-6">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/melkie-yilk-08a862297/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-3xl text-blue-700 hover:text-[#8CED1F]"
@@ -57,20 +57,21 @@ const Footer = () => {
             <i className="devicon-github-original"></i>
           </a>
           <a
-            href="https://twitter.com"
+            href="https://twitter.com/melkien_d12"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl text-blue-400 hover:text-[#8CED1F]"
+            className="text-3xl text-white hover:text-[#8CED1F]"
           >
             <i className="devicon-twitter-original"></i>
           </a>
+
           <a
-            href="https://www.instagram.com"
+            href="https://www.facebook.com/melkien16"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl text-pink-500 hover:text-[#8CED1F]"
+            className="text-3xl text-blue-600 hover:text-[#8CED1F]"
           >
-            <i className="devicon-instagram-plain"></i>
+            <i className="devicon-facebook-plain"></i>
           </a>
         </div>
       </div>
