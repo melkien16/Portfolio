@@ -5,7 +5,7 @@ const ProjectsSection = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <div className="p-28 pt-10 bg-black-300">
+    <div className="p-28 pt-10 bg-black-300" id="Projects">
       <h1 className="main-title m-10 relative inline-block">Projects</h1>
       <div className="flex gap-5 justify-center">
         {Projects.map(({ id }) => (

@@ -47,7 +47,7 @@ const Hero = () => {
   // });
 
   return (
-    <div className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins">
+    <div className="bg mt-16 p-16 px-28 flex items-center bg-cover bg-center font-poppins" id="home">
       <div className="flex justify-between items-center h-[77vh]">
         <div className="w-1/2 my-10">
           <h1 className="text-[2rem] font-bold mt-7">

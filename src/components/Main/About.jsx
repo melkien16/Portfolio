@@ -5,7 +5,7 @@ import IMG4 from "../../assets/04.jpg";
 
 const About = () => {
   return (
-    <div className="px-28 py-20 text-white-700">
+    <div className="px-28 py-20 text-white-700" id="about">
       <h1 className="main-title m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">
         About
       </h1>

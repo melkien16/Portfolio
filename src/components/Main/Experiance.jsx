@@ -2,7 +2,7 @@ import Experiance from "./ExperianseList";
 
 const Skills = () => {
   return (
-    <div className="bg-black-300 text-white py-16 px-8">
+    <div className="bg-black-300 text-white py-16 px-8 exp-bg">
       <h2 className="text-center text-4xl font-bold mb-12">Experience</h2>
       <div className="max-w-4xl mx-auto">
         {Experiance.map((exp, index) => (
@@ -15,14 +15,14 @@ const Skills = () => {
                 {exp.year}
               </span>
               <div className="flex flex-col items-center gap-3 justify-between">
-                <div className="w-4 h-4 bg-yellow-500 rounded-full mt-4"></div>
-                <div className="w-[3px] bg-yellow-500 h-28 rounded-3xl"></div>
+                <div className="w-4 h-4 bg-primary rounded-full mt-4"></div>
+                <div className="w-[3px] bg-primary h-28 rounded-3xl"></div>
               </div>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6 ml-8">
               <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
-              <h4 className="text-lg text-yellow-400 mb-4">{exp.company}</h4>
+              <h4 className="text-lg text-primary-900 mb-4">{exp.company}</h4>
               <p className="text-sm leading-relaxed">{exp.description}</p>
             </div>
           </div>
