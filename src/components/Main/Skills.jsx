@@ -15,13 +15,13 @@ const Skills = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="p-28 pt-10"
+      className="lg:p-28 p-6 lg:pt-10 pt-5"
       id="Skills"
     >
-      <h1 className="text-3xl font-bold mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all">
+      <h1 className="text-2xl lg:text-3xl font-bold mb-5 lg:mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all">
         Skills &amp; Technologies
       </h1>
-      <div className="grid grid-cols-3 gap-7">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-7">
         <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
           <h1 className="my-3 text-3xl font-bold sub-title relative inline-block ml-20 mb-8 hover:text-white-500 font-tas transition-all">
             Languages

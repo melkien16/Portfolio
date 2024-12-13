@@ -9,7 +9,7 @@ const Contact = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="bg-black-200 p-28 pt-0 flex flex-col justify-center items-center "
+      className="bg-black-200 lg:p-28 p-6 pt-0 flex flex-col justify-center items-center "
       id="contact"
     >
       <div className="py-4 px-7 bg-primary -mt-8 rounded-3xl">
@@ -17,11 +17,11 @@ const Contact = () => {
           Let&apos;s get connected and work together
         </h1>
       </div>
-      <div className="flex gap-5 justify-center items-center">
-        <p className="text-5xl leading-relaxed font-extralight">
+      <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
+        <p className="lg:text-5xl text-4xl md:leading-relaxed font-extralight">
           I am not hard to find,
           <br /> let&apos;s create something <br /> truly{" "}
-          <span className="font-tas text-primary-900 text-9xl l">special</span>
+          <span className="font-tas text-primary-900 lg:text-9xl text-6xl l">special</span>
         </p>
         <form action="">
           <input

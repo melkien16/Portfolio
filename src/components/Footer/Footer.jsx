@@ -2,7 +2,7 @@ import "devicon/devicon.min.css";
 
 const Footer = () => {
   return (
-    <footer className="p-10 bg-black-500 text-white">
+    <footer className="lg:p-10 p-4 bg-black-500 text-white">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <h2 className="text-3xl font-bold text-[#8CED1F]">Melkie Yilk</h2>
@@ -11,7 +11,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <ul className="flex space-x-8 text-lg">
+        <ul className="hidden md:flex mg:space-x-8 mg:text-lg">
           <li>
             <a href="#home" className="hover:text-[#8CED1F]">
               Home

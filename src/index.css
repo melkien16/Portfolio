@@ -100,7 +100,7 @@ body {
   }
 
   .main-title {
-    @apply text-5xl font-bold ml-48;
+    @apply lg:text-5xl text-4xl font-bold md:ml-48 ml-10;
   }
 }
 

@@ -14,11 +14,11 @@ const ProjectsSection = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="p-28 pt-10 bg-black-500"
+      className="lg:p-28 p-6 sm:p-10 lg:pt-10 bg-black-500"
       id="Projects"
     >
-      <h1 className="main-title m-10 relative inline-block">Projects</h1>
-      <div className="flex gap-5 justify-center">
+      <h1 className="text-gray_gradient main-title lg:m-10 m-6 relative inline-block">Projects</h1>
+      <div className="lg:flex lg:gap-5 justify-center grid grid-cols-1 md:grid-cols-2 gap-6">
         {Projects.map(({ id, title, description, image, href }) => (
           <div
             className={` h-[500px] w-[300px] cont rounded-3xl relative transition-all duration-300 ease-in-out ${

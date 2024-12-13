@@ -14,20 +14,20 @@ const About = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="px-28 py-20 text-white-700"
+      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-white-700"
       id="about"
     >
-      <h1 className="main-title m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">
+      <h1 className="main-title m-2 lg:m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">
         About
       </h1>
 
-      <div className="flex justify-center my-12 motion-preset-blur-right motion-duration-2000">
-        <div className="flex justify-start gap-9">
-          <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold sub-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
+      <div className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000">
+        <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full">
+          <div className="w-[500px] lg:mt-8">
+            <h1 className="md:my-3 text-2xl  md:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all">
               Who I Am
             </h1>
-            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-1 md:hover:px-4 md:hover:py-8 hover:py-1 transition-all">
               I’m Melkie, a 3rd year Information System Student and dedicated
               Full-Stack Web Developer passionate about creating impactful and
               scalable solutions and a dedicated learner of data structures and
@@ -41,34 +41,38 @@ const About = () => {
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
         </div>
-        <img
-          className="w-1/2"
-          src={IMG}
-          width={600}
-          alt="Image"
-          loading={"lazy"}
-        />
+        <div className="lg:w-1/2">
+          <img
+            className="w-100% rounded-lg"
+            src={IMG}
+            width={600}
+            alt="Image"
+            loading={"lazy"}
+          />
+        </div>
       </div>
 
-      <div className="flex justify-center my-12 motion-preset-blur-right motion-duration-2000">
-        <img
-          className="w-1/2"
-          src={IMG2}
-          width={600}
-          alt="Image"
-          loading={"lazy"}
-        />
-        <div className="flex justify-center gap-9">
+      <div className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000">
+        <div className="lg:w-1/2 ">
+          <img
+            className="100% rounded-lg"
+            src={IMG2}
+            width={600}
+            alt="Image"
+            loading={"lazy"}
+          />
+        </div>
+        <div className="my-6 flex justify-center md:gap-9 gap-3 lg:w-1/2">
           <div className="flex items-center flex-col z-40">
             <div className="w-3 h-3 bg-primary rounded-full shadow-line z-50"></div>
             <div className="w-[3px] bg-primary h-full shadow-line"></div>
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
-          <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold sub-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
+          <div className="w-[500px] lg:mt-8">
+            <h1 className="lg:my-3 text-2xl lg:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all ml-4">
               What Drives Me
             </h1>
-            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
+            <p className="hover:border-y-[3px] hover:px-1 hover:border-primary rounded-lg lg: lg:hover:py-8 hover:py-1 transition-all">
               Curiosity and innovation are at the heart of my journey. I thrive
               on mastering emerging technologies, solving complex challenges,
               and collaborating with others to build systems that truly make a
@@ -78,13 +82,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex justify-center my-12 motion-preset-blur-right motion-duration-2000">
-        <div className="flex justify-start gap-9">
-          <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold sub-title relative inline-block mb-8 font-tas hover:text-white-500 transition-all">
+      <div className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000">
+        <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full mt-8">
+          <div className="w-[500px] lg:mt-8">
+            <h1 className="md:my-3 text-2xl  md:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all">
               My Mission
             </h1>
-            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg lg:hover:px-4 hover:px-1 lg:hover:py-8 hover:py-1 transition-all">
               My mission is to empower organizations by delivering solutions
               that amplify their growth and solve real-world problems. I’m
               particularly driven to create impactful systems for businesses and
@@ -98,35 +102,39 @@ const About = () => {
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
         </div>
-        <img
-          className="w-1/2"
-          src={IMG3}
-          width={600}
-          alt="Image"
-          loading={"lazy"}
-        />
+        <div className="lg:w-1/2">
+          <img
+            className="w-100% rounded-lg"
+            src={IMG3}
+            width={600}
+            alt="Image"
+            loading={"lazy"}
+          />
+        </div>
       </div>
 
-      <div className="flex my-12 motion-preset-blur-right motion-duration-2000">
-        <img
-          className="w-1/2"
-          src={IMG4}
-          width={600}
-          alt="Image"
-          loading={"lazy"}
-        />
-        <div className="flex justify-center gap-9">
+      <div className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000">
+        <div className="lg:w-1/2">
+          <img
+            className="w-100% rounded-lg"
+            src={IMG4}
+            width={600}
+            alt="Image"
+            loading={"lazy"}
+          />
+        </div>
+        <div className="my-6 flex justify-center md:gap-9 gap-3 lg:w-1/2">
           <div className="flex items-center flex-col ">
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
             <div className="w-[3px] bg-primary h-full shadow-line"></div>
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
-          <div className="w-[500px] mt-8">
-            <h1 className="my-3 text-3xl font-bold sub-title relative inline-block mb-8 hover:text-white-500 font-tas transition-all">
+          <div className="w-[500px] lg:mt-8">
+            <h1 className="lg:my-3 text-2xl lg:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all ml-4">
               Why Collaborate With Me?
             </h1>
 
-            <ul className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-4 hover:py-8 transition-all">
+            <ul className="hover:border-y-[3px] hover:px-1 hover:border-primary rounded-lg lg: lg:hover:py-8 hover:py-1 transition-all">
               <li>
                 <span className="font-bold italic">Committed</span>, Every
                 project I take on is approached with precision and purpose
