@@ -1,4 +1,4 @@
-const experiences = [
+const ExperianceList = [
   {
     year: "2021",
     title: "Senior Python Developer",
@@ -22,4 +22,4 @@ const experiences = [
   },
 ];
 
-export default experiences;
+export default ExperianceList;

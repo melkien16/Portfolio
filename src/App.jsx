@@ -5,11 +5,9 @@ import Main from "./components/Main/Main";
 function App() {
   return (
     <>
-      <div className="dark">
         <Header />
         <Main />
         <Footer />
-      </div>
     </>
   );
 }

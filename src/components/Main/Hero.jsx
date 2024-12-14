@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import IMG from "../../assets/exp.png";
 
 const Hero = () => {
+  const isDark = document.body.classList.contains("dark");
+  console.log(isDark);
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.99 }}
@@ -17,7 +19,17 @@ const Hero = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="bg  md:mt-16 mt-9 lg:p-16 lg:px-28 px-6 flex items-center flex-col bg-cover bg-center font-poppins dark:bg-slate-200 dark:text-black-100"
+      style={{
+        background: "#49495c2b",
+        backgroundImage: `linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 1px
+        ),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+        backgroundSize: "20px 20px",
+      }}
+      className="md:mt-16 mt-9 lg:p-16 lg:px-28 px-6 flex items-center flex-col bg-cover bg-center font-poppins dark:bg-slate-200 dark:text-black-100"
       id="home"
     >
       <div className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-between items-center h-[77vh]">

@@ -29,7 +29,7 @@ export default {
           500: "#62646C",
         },
         primary: {
-          DEFAULT: "#94FC13",
+          DEFAULT: "#8CED1F",
           900: "#94FC13",
           500: "#A2FF2F",
           300: "#C0FF73",

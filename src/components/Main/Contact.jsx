@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import Phone from "/src/assets/contact-photos/phone-call.png";
+import Email from "/src/assets/contact-photos/communications.png";
+import Location from "/src/assets/contact-photos/placeholder.png";
 
 const Contact = () => {
   return (
@@ -10,7 +13,7 @@ const Contact = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="bg-black-200 dark:bg-slate-200 dark:text-slate-900 text-slate-200 lg:px-28 p-6 pt-0 flex flex-col lg:pb-14"
+      className="bg-black-200 dark:bg-slate-100 dark:text-slate-900 text-slate-200 lg:px-28 p-6 pt-0 flex flex-col lg:pb-14"
       id="contact"
     >
       <div className="py-4 px-7 bg-primary -mt-8 rounded-3xl text-center">
@@ -30,10 +33,29 @@ const Contact = () => {
           </q>
         </p>
 
-        <div className="flex flex-col gap-4">
-          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg"></div>
-          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg"></div>
-          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg"></div>
+        <div className="flex flex-col gap-4 font-poppins text-lg text-slate-900">
+          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
+            <img src={Phone} width={40} className="" alt="" />
+            <p>+251-946-157-252</p>
+          </div>
+          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
+            <img
+              src={Email}
+              width={40}
+              className=""
+              alt=""
+            />
+            <p>melkie.yilk-ug@aau.edu.et</p>
+          </div>
+          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
+            <img
+              src={Location}
+              width={40}
+              className=""
+              alt=""
+            />
+            <p>Addis Ababa, Ethiopia</p>
+          </div>
         </div>
 
         <form className="w-full max-w-md">
