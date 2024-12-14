@@ -8,8 +8,6 @@ import { motion } from "framer-motion";
 import IMG from "../../assets/exp.png";
 
 const Hero = () => {
-  const isDark = document.body.classList.contains("dark");
-  console.log(isDark);
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.99 }}
