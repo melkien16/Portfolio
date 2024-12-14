@@ -43,4 +43,5 @@ export default {
     },
   },
   plugins: [motion],
+  darkMode: "class",
 };

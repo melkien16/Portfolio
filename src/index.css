@@ -9,16 +9,11 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
-}
-
 body {
-  background: #010103;
+  /* background: #010103; */
   font-family: "roboto", sans-serif;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.97);
-  scroll-behavior: smooth;
+  /* color: rgba(255, 255, 255, 0.97); */
 }
 .bg {
   background: #49495c2b;

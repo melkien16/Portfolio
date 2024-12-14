@@ -14,7 +14,7 @@ const About = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-white-700"
+      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-white-700 dark:bg-slate-300 dark:text-slate-900"
       id="about"
     >
       <h1 className="main-title m-2 lg:m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">

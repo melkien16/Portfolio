@@ -8,7 +8,7 @@ import Close from "../../assets/close.svg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px] fixed right-0 lg:text-[18px] left-0 top-0 bg-black z-50 font-poppins">
+    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px] fixed right-0 lg:text-[18px] left-0 top-0 bg-black z-50 font-poppins dark:bg-slate-200 dark:text-slate-900">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}

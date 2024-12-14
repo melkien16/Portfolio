@@ -11,7 +11,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <ul className="hidden md:flex mg:space-x-8 mg:text-lg">
+        <ul className="hidden md:flex md:space-x-8 mg:text-lg">
           <li>
             <a href="#home" className="hover:text-[#8CED1F]">
               Home

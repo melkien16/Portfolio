@@ -15,7 +15,7 @@ const Skills = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="lg:p-28 p-6 lg:pt-10 pt-5"
+      className="lg:p-28 p-6 lg:pt-10 pt-5 dark:bg-slate-200 dark:text-slate-900"
       id="Skills"
     >
       <h1 className="text-2xl lg:text-3xl font-bold mb-5 lg:mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all">

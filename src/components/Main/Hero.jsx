@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import IMG from "../../assets/exp.png";
 
 const Hero = () => {
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.99 }}
@@ -18,7 +17,7 @@ const Hero = () => {
         delay: 0.1,
         ease: "easeInOut",
       }}
-      className="bg mt-16 lg:p-16 lg:px-28 px-6 flex items-center flex-col bg-cover bg-center font-poppins"
+      className="bg  md:mt-16 mt-9 lg:p-16 lg:px-28 px-6 flex items-center flex-col bg-cover bg-center font-poppins dark:bg-slate-200 dark:text-black-100"
       id="home"
     >
       <div className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-between items-center h-[77vh]">
@@ -35,11 +34,11 @@ const Hero = () => {
         <div className="lg:w-1/2 my-14 md:m-6 md:my-10 flex flex-col justify-center items-center">
           <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1">
             Hi, I&apos;m
-            <span className="text-6xl font-extrabold l px-4 hover:motion-preset-focus ">
+            <span className="lg:text-6xl text-5xl font-extrabold l px-4 hover:motion-preset-focus ">
               Melkie
             </span>
           </h1>
-          <p className="mb-7 text-[24px] font-tas">
+          <p className="mb-16 lg:text-[24px] font-tas">
             Full-Stack Web Developer | Tech Enthusiast
           </p>
           <p className="mb-6 text-center">
