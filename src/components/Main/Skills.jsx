@@ -80,7 +80,7 @@ const Skills = () => {
         </div>
         <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
           <h1 className="my-3 text-3xl font-bold sub-title relative inline-block lg:ml-20 mb-8 hover:text-white-500 font-tas transition-all">
-            Languages and Toos
+            Libraries and Frameworks
           </h1>
           <div className="grid grid-cols-3 ">
             {Frameworks.map(({ id, name, className }) => {
@@ -125,7 +125,7 @@ const Skills = () => {
         </div>
         <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
           <h1 className="my-3 text-3xl font-bold sub-title relative inline-block lg:ml-20 mb-8 hover:text-white-500 font-tas transition-all">
-            Languages and Tools
+            Tools
           </h1>
           <div className="grid grid-cols-3">
             {Tools.map(({ id, name, className }) => {
