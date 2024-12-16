@@ -31,7 +31,7 @@ const Header = () => {
           Melkie
         </Link>
       </motion.div>
-      <div className="md:flex hidden">
+      <div className="md:flex justify-end items-center gap-12 hidden">
         <NavBars />
 
         <button className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-primary-300 hover:bg-black-600 transition-all">
@@ -81,7 +81,7 @@ const Header = () => {
         <div
           className={`${
             isOpen
-              ? "absolute top-16 right-3 bg-black-100 p-3 rounded-lg"
+              ? "absolute top-16 right-3 bg-black-100 text-white-800 dark:bg-slate-200 dark:text-black-100 p-3 rounded-lg"
               : "hidden"
           } transition-all duration-700 ease-linear`}
         >
