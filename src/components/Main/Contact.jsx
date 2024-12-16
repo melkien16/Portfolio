@@ -5,24 +5,35 @@ import Location from "/src/assets/contact-photos/placeholder.png";
 
 const Contact = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 1.5,
-        delay: 0.1,
-        ease: "easeInOut",
-      }}
+    <div
       className="bg-black-200 dark:bg-slate-100 dark:text-slate-900 text-slate-200 lg:px-28 p-6 pt-0 flex flex-col lg:pb-14"
       id="contact"
     >
-      <div className="py-4 px-7 bg-primary -mt-8 rounded-3xl text-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="py-4 px-7 bg-primary -mt-8 rounded-3xl text-center"
+      >
         <h1 className="text-black-100 text-2xl font-roboto">
           Let&apos;s get connected and work together
         </h1>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col md:flex-row gap-10 justify-between items-center mt-10">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col md:flex-row gap-10 justify-between items-center mt-10"
+      >
         <p className="md:text-4xl text-3xl md:leading-tight text-center md:text-left font-poppins">
           <q>
             Every great project begins with a simple hello.
@@ -39,21 +50,11 @@ const Contact = () => {
             <p>+251-946-157-252</p>
           </div>
           <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
-            <img
-              src={Email}
-              width={40}
-              className=""
-              alt=""
-            />
+            <img src={Email} width={40} className="" alt="" />
             <p>melkie.yilk-ug@aau.edu.et</p>
           </div>
           <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
-            <img
-              src={Location}
-              width={40}
-              className=""
-              alt=""
-            />
+            <img src={Location} width={40} className="" alt="" />
             <p>Addis Ababa, Ethiopia</p>
           </div>
         </div>
@@ -79,8 +80,8 @@ const Contact = () => {
             Send
           </button>
         </form>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

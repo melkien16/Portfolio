@@ -3,19 +3,32 @@ import { motion } from "framer-motion";
 
 const Experiance = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration:   1.5,
-        delay: 0.1,
-        ease: "easeInOut",
-      }}
+    <div
       className="bg-black-300 text-white py-16 px-8 exp-bg dark:bg-slate-200"
       id="Experience"
     >
-      <h2 className="text-center text-4xl font-bold mb-12">Experience</h2>
-      <div className="max-w-4xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="text-center text-4xl font-bold mb-12"
+      >
+        Experience
+      </motion.h2>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="max-w-4xl mx-auto"
+      >
         {ExperianceList.map((exp, index) => (
           <div
             key={index}
@@ -38,8 +51,8 @@ const Experiance = () => {
             </div>
           </div>
         ))}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

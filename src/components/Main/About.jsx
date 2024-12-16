@@ -6,22 +6,33 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 1.5,
-        delay: 0.1,
-        ease: "easeInOut",
-      }}
-      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-white-00 dark:bg-slate-200 dark:text-slate-900"
+    <div
+      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-slate-100 bg-slate-900 dark:bg-slate-200 dark:text-slate-900"
       id="about"
     >
-      <h1 className="main-title m-2 lg:m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all">
+      <motion.h1
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="main-title m-2 lg:m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all"
+      >
         About
-      </h1>
+      </motion.h1>
 
-      <div className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000"
+      >
         <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full">
           <div className="w-[500px] lg:mt-8">
             <h1 className="md:my-3 text-2xl  md:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all">
@@ -50,9 +61,18 @@ const About = () => {
             loading={"lazy"}
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000"
+      >
         <div className="lg:w-1/2 ">
           <img
             className="100% rounded-lg"
@@ -80,9 +100,18 @@ const About = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000"
+      >
         <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full mt-8">
           <div className="w-[500px] lg:mt-8">
             <h1 className="md:my-3 text-2xl  md:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all">
@@ -111,9 +140,18 @@ const About = () => {
             loading={"lazy"}
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000"
+      >
         <div className="lg:w-1/2">
           <img
             className="w-100% rounded-lg"
@@ -151,8 +189,8 @@ const About = () => {
             </ul>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

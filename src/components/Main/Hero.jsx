@@ -1,46 +1,57 @@
-import { PerspectiveCamera } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import ComputerHome from "./ComputerHome";
-import { Suspense } from "react";
-import CanvaLoader from "./CanvaLoader";
-import HeroCamera from "./HeroCamera";
+// import { PerspectiveCamera } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import ComputerHome from "./ComputerHome";
+// import { Suspense } from "react";
+// import CanvaLoader from "./CanvaLoader";
+// import HeroCamera from "./HeroCamera";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import IMG from "../../assets/exp.png";
+import IMGHero from "../../assets/HeroImg/business-7745314_1920.png";
+import pattern from "../../assets/HeroImg/pattern.png";
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.99 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 1.5,
-        delay: 0.1,
-        ease: "easeInOut",
-      }}
-      style={{
-        background: "#49495c2b",
-        backgroundImage: `linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.05) 1px,
-          transparent 1px
-        ),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
-        backgroundSize: "20px 20px",
-      }}
-      className="md:mt-16 mt-9 lg:p-16 lg:px-28 px-6 flex items-center flex-col bg-cover bg-center font-poppins dark:bg-slate-200 dark:text-black-100"
+    <div
+      className="md:mt-16 mt-9 lg:p-16 lg:px-28 px-6 flex items-center flex-col md:flex-row md:justify-end bg-cover bg-center font-poppins dark:bg-slate-100 bg-black text-slate-100 dark:text-slate-900"
       id="home"
     >
-      <div className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-between items-center h-[77vh]">
-        <div className="lg:hidden absolute top-16 -z-10">
-          <img
-            src={IMG}
-            alt=""
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
-          />
-        </div>
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <img
+          src={pattern}
+          className="absolute md:top-32 left-10 md:w-[550px] w-52"
+          style={{
+            left: `${isHovered ? "1rem" : "2.5rem"}`,
+            bottom: `${isHovered ? "1.5rem" : "1.25rem"}`,
+            transition: "all .7s",
+            scale: `${isHovered ? "1.06" : "1"}`,
+          }}
+        />
+        <img
+          src={IMGHero}
+          className="md:w-[73%] md:h-[83%] absolute"
+          style={{
+            left: `${isHovered ? "6.4rem" : "5.8rem"}`,
+            bottom: `${isHovered ? "1.25rem" : "0"}`,
+            transition: "all .7s",
+            scale: `${isHovered ? "1.04" : "1"}`,
+          }}
+        />
+      </div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-end items-end h-[77vh] z-40"
+      >
         <div className="lg:w-1/2 my-14 md:m-6 md:my-10 flex flex-col justify-center items-center">
           <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1">
             Hi, I&apos;m
@@ -65,10 +76,10 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="hidden w-3/4 h-full lg:flex items-start justify-start">
-          <div className="w-full h-full flex items-start justify-start">
+        {/* <div className="hidden w-3/4 h-full lg:flex items-start justify-start">
+          <motion.div className="w-full h-full flex items-start justify-start">
             {/* <Leva /> */}
-            <Canvas className="">
+        {/* <Canvas className="">
               <Suspense fallback={<CanvaLoader />}>
                 <PerspectiveCamera makeDefault position={[0, 0, 30]} />
                 <HeroCamera>
@@ -82,10 +93,10 @@ const Hero = () => {
                 <directionalLight position={[10, 10, 10]} intensity={0.5} />
               </Suspense>
             </Canvas>
-          </div>
-        </div>
-      </div>
-    </motion.div>
+          </div> */}
+        {/* </div> */}
+      </motion.div>
+    </div>
   );
 };
 

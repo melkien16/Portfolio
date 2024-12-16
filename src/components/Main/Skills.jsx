@@ -7,21 +7,32 @@ const Skills = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 1.5,
-        delay: 0.1,
-        ease: "easeInOut",
-      }}
-      className="lg:p-28 p-6 lg:pt-10 pt-5 dark:bg-slate-200 dark:text-slate-900"
+    <div
+      className="lg:p-28 p-6 lg:pt-10 pt-5 dark:bg-slate-200 bg-slate-950 text-slate-100 dark:text-slate-900"
       id="Skills"
     >
-      <h1 className="text-2xl lg:text-3xl font-bold mb-5 lg:mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all">
+      <motion.h1
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="text-2xl lg:text-3xl font-bold mb-5 lg:mb-10 text-center main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all"
+      >
         Skills &amp; Technologies
-      </h1>
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-7">
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.99 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeInOut",
+        }}
+        className="grid lg:grid-cols-3 sm:grid-cols-2 gap-7"
+      >
         <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
           <h1 className="my-3 text-3xl font-bold sub-title relative inline-block ml-20 mb-8 hover:text-white-500 font-tas transition-all">
             Languages
@@ -157,8 +168,8 @@ const Skills = () => {
             })}
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
