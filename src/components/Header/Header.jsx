@@ -45,7 +45,7 @@ const Header = () => {
         </motion.button>
       </div>
       <div
-        className="fixed md:top-7 top-5 md:right-0 right-20"
+        className="fixed md:top-6 top-5 md:right-2 right-20"
         style={{
           justifyContent: "center",
           alignItems: "center",
