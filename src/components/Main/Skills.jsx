@@ -8,7 +8,7 @@ const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <div
-      className="lg:p-28 p-6 lg:pt-10 pt-5 dark:bg-slate-200 bg-slate-950 text-slate-100 dark:text-slate-900"
+      className="lg:p-28 p-6 lg:pt-10 pt-5 text-slate-100 bg-slate-900 dark:bg-slate-200 dark:text-slate-900"
       id="Skills"
     >
       <motion.h1

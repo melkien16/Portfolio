@@ -17,9 +17,9 @@ const Contact = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="md:py-10 my-6 px-7 bg-primary md:-mt-14 -mt-8 rounded-3xl text-center"
+        className="md:py-10 bg-primary md:-mt-14 -mt-8 rounded-3xl "
       >
-        <h1 className="text-black-100 text-2xl font-roboto">
+        <h1 className="text-black-100 text-center text-2xl font-roboto">
           Let&apos;s get connected and work together
         </h1>
       </motion.div>
