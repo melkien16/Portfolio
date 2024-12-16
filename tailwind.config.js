@@ -35,6 +35,7 @@ export default {
           300: "#C0FF73",
           200: "#E2FFBF",
           100: "#F4FFE6",
+          50: "#54E600"
         },
         helper: {
           default: "#3D9561",

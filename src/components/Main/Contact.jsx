@@ -17,7 +17,7 @@ const Contact = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="py-4 px-7 bg-primary -mt-8 rounded-3xl text-center"
+        className="py-10 px-7 bg-primary -mt-14 rounded-3xl text-center"
       >
         <h1 className="text-black-100 text-2xl font-roboto">
           Let&apos;s get connected and work together

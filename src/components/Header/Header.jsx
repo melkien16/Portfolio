@@ -25,7 +25,7 @@ const Header = () => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-primary-900 sm:font-extrabold font-bold text-white border border-primary rounded-md sm:px-3 px-1 md:text-[20px] lg:text-[24px] text-[18px] sm:text-[24px] hover:bg-black-600 hover:text-primary-900 transition-all duration-100 cursor-pointer mr-4"
+        className="bg-primary-900 sm:font-extrabold font-bold text-white border border-primary rounded-md sm:px-3 px-1 md:text-[20px] lg:text-[24px] text-[18px] sm:text-[24px] hover:bg-transparent hover:text-primary-900 transition-all duration-100 cursor-pointer mr-4"
       >
         <Link to="/" smooth={true} duration={500}>
           Melkie
@@ -34,7 +34,7 @@ const Header = () => {
       <div className="md:flex justify-end items-center gap-12 hidden">
         <NavBars />
 
-        <button className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-primary-300 hover:bg-black-600 transition-all">
+        <button className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-white-800 hover:bg-primary transition-all">
           <Link to="contact" smooth={true} duration={500}>
             Let&apos;s Talk
           </Link>

@@ -8,6 +8,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import IMGHero from "../../assets/HeroImg/business-7745314_1920.png";
 import pattern from "../../assets/HeroImg/pattern.png";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -51,7 +52,7 @@ const Hero = () => {
         <div className="lg:w-1/2 my-14 md:m-6 md:my-10 flex flex-col justify-center items-center">
           <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1">
             Hi, I&apos;m
-            <span className="lg:text-6xl text-5xl font-extrabold l px-4 hover:motion-preset-focus ">
+            <span className="lg:text-6xl text-primary-200 text-5xl font-extrabold l px-4 hover:motion-preset-focus ">
               Melkie
             </span>
           </h1>
@@ -64,11 +65,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col items-start justify-start md:flex-row gap-4">
-            <button className="bg-primary py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[2px] sm:hover:border-[3px] hover:text-primary-900 border-primary ">
-              <a href="#Projects">View Projects</a>
+            <button className="bg-primary py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[2px] sm:hover:border-[3px] hover:text-primary-50 border-primary ">
+              <Link to="Projects" smooth={true} duration={500}>
+                View Projects
+              </Link>
             </button>
             <button className="text-primary py-2 px-12 rounded-3xl hover:px-14 hover:bg-primary border-[2px] sm:border-[3px] border-primary hover:text-white-800 transition-all">
-              <a href="#contact">Hire Me</a>
+              <Link to="contact" smooth={true} duration={500}>
+                Hire Me
+              </Link>
             </button>
           </div>
         </div>
