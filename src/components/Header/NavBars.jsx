@@ -9,7 +9,17 @@ const NavBars = () => {
             key={id}
             className="hover:text-primary-500 transition-all text-[16px] lg:text-[18px] relative"
           >
-            <Link to={href} smooth={true} duration={500} className="nav-list cursor-pointer">
+            <Link
+              to={href}
+              smooth={true}
+              duration={500}
+              spy={true}
+              className="nav-list cursor-pointer"
+              activeStyle={{
+                color: "#8CED1F",
+                transition: "all 1s",
+              }}
+            >
               {title}
             </Link>
           </div>
