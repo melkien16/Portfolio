@@ -34,11 +34,15 @@ const Header = () => {
       <div className="md:flex justify-end items-center gap-12 hidden">
         <NavBars />
 
-        <button className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-white-800 hover:bg-primary transition-all">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-white-800 hover:bg-primary transition-all"
+        >
           <Link to="contact" smooth={true} duration={500}>
             Let&apos;s Talk
           </Link>
-        </button>
+        </motion.button>
       </div>
       <div
         style={{
@@ -49,10 +53,9 @@ const Header = () => {
         }}
       >
         <div
+          className="w-14 h-6 sm:w-20 sm:h-10"
           onClick={toggleMode}
           style={{
-            width: "80px",
-            height: "40px",
             backgroundColor: isDarkMode ? "#444" : "#ddd",
             borderRadius: "40px",
             display: "flex",
@@ -65,11 +68,9 @@ const Header = () => {
         >
           <motion.div
             layout
+            className="w-5 h-5 sm:w-[30px] sm:h-[30px] rounded-[50%]"
             style={{
-              width: "30px",
-              height: "30px",
               backgroundColor: isDarkMode ? "#fff" : "#666",
-              borderRadius: "50%",
             }}
           />
         </div>
