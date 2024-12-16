@@ -31,7 +31,7 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000"
+        className="flex flex-col-reverse lg:flex-row justify-center my-8 md:my-12 motion-preset-blur-right motion-duration-2000"
       >
         <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full">
           <div className="w-[500px] lg:mt-8">
@@ -110,7 +110,7 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="flex flex-col-reverse lg:flex-row justify-center my-3 md:my-12 motion-preset-blur-right motion-duration-2000"
+        className="flex flex-col-reverse lg:flex-row justify-center my-8 md:my-12 motion-preset-blur-right motion-duration-2000"
       >
         <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full mt-8">
           <div className="w-[500px] lg:mt-8">
