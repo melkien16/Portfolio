@@ -28,7 +28,7 @@ const ExperienceList = [
       "Learned Python independently through online resources and built an Information Retrieval System for the Afan Oromo language. Also solved over 150 algorithmic challenges on LeetCode, focusing on writing clean, efficient, and scalable code.",
   },
   {
-    year: "2022",
+    year: "2023",
     title: "Java Developer",
     company: "University Coursework",
     description:
