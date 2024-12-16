@@ -32,15 +32,15 @@ const Experiance = () => {
         {ExperianceList.map((exp, index) => (
           <div
             key={index}
-            className="flex items-start relative mb-12 last:mb-0"
+            className="flex flex-col md:flex-row items-start relative mb-12 last:mb-0"
           >
             <div className="flex flex-col items-center flex-shrink-0 w-24">
               <span className="bg-gray-700 dark:bg-slate-100 dark:text-slate-900 text-sm font-medium py-1 px-2 rounded-md">
                 {exp.year}
               </span>
-              <div className="flex flex-col items-center gap-3 justify-between">
-                <div className="w-4 h-4 bg-primary rounded-full mt-4"></div>
-                <div className="w-[3px] bg-primary h-28 rounded-3xl"></div>
+              <div className="ml-12 flex flex-row md:flex-col items-center gap-3 md:justify-between justify-center">
+                <div className="w-4 h-4 bg-primary rounded-full md:mt-4"></div>
+                <div className="md:w-[3px] w-32 h-[3px] bg-primary md:h-28 rounded-3xl"></div>
               </div>
             </div>
 

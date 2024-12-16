@@ -21,7 +21,7 @@ const Header = () => {
   const toggleMode = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px] fixed right-0 lg:text-[18px] left-0 top-0 bg-black z-50 font-poppins dark:bg-slate-200 dark:text-slate-900">
+    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px]  lg:text-[18px] bg-black z-50 font-poppins dark:bg-slate-200 dark:text-slate-900 fixed right-0 left-0 top-0">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -39,39 +39,39 @@ const Header = () => {
             Let&apos;s Talk
           </Link>
         </button>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          transition: "background-color 0.5s ease",
+        }}
+      >
         <div
+          onClick={toggleMode}
           style={{
+            width: "80px",
+            height: "40px",
+            backgroundColor: isDarkMode ? "#444" : "#ddd",
+            borderRadius: "40px",
             display: "flex",
-            justifyContent: "center",
             alignItems: "center",
-            transition: "background-color 0.5s ease",
+            justifyContent: isDarkMode ? "flex-end" : "flex-start",
+            padding: "5px",
+            cursor: "pointer",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
           }}
         >
-          <div
-            onClick={toggleMode}
+          <motion.div
+            layout
             style={{
-              width: "80px",
-              height: "40px",
-              backgroundColor: isDarkMode ? "#444" : "#ddd",
-              borderRadius: "40px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: isDarkMode ? "flex-end" : "flex-start",
-              padding: "5px",
-              cursor: "pointer",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+              width: "30px",
+              height: "30px",
+              backgroundColor: isDarkMode ? "#fff" : "#666",
+              borderRadius: "50%",
             }}
-          >
-            <motion.div
-              layout
-              style={{
-                width: "30px",
-                height: "30px",
-                backgroundColor: isDarkMode ? "#fff" : "#666",
-                borderRadius: "50%",
-              }}
-            />
-          </div>
+          />
         </div>
       </div>
       <div

@@ -45,34 +45,49 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col gap-4 font-poppins text-lg text-slate-900">
-          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
+          <div className="w-80 h-32 bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
             <img src={Phone} width={40} className="" alt="" />
             <p>+251-946-157-252</p>
           </div>
-          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
+          <div className="w-80 h-32 bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
             <img src={Email} width={40} className="" alt="" />
             <p>melkie.yilk-ug@aau.edu.et</p>
           </div>
-          <div className="w-80 h-32 bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
+          <div className="w-80 h-32 bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
             <img src={Location} width={40} className="" alt="" />
             <p>Addis Ababa, Ethiopia</p>
           </div>
         </div>
 
-        <form className="w-full max-w-md">
+        <form
+          className="w-full max-w-md"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="8d88662d-209e-46b0-9994-1a148ad502b3"
+          />
+
           <input
             type="text"
             placeholder="Name"
+            name="name"
+            required
             className="block w-full p-3 my-8 rounded-md bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 dark:shadow-lg focus:outline-none dark:placeholder-white"
           />
           <input
             type="email"
             placeholder="Email"
+            name="email"
+            required
             className="block w-full p-3 my-8 rounded-md bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 dark:shadow-lg focus:outline-none dark:placeholder-white"
           />
           <textarea
             cols="40"
             rows="5"
+            name="message"
             placeholder="Message"
             className="block w-full p-3 my-8 rounded-md bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 dark:shadow-lg focus:outline-none dark:placeholder-white"
           ></textarea>

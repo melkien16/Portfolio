@@ -23,23 +23,19 @@ const Hero = () => {
       >
         <img
           src={pattern}
-          className="absolute md:top-32 left-10 md:w-[550px] w-52"
-          style={{
-            left: `${isHovered ? "1rem" : "2.5rem"}`,
-            bottom: `${isHovered ? "1.5rem" : "1.25rem"}`,
-            transition: "all .7s",
-            scale: `${isHovered ? "1.06" : "1"}`,
-          }}
+          className={`absolute md:w-[550px] w-52 ${
+            isHovered
+              ? "md:left-4 md:bottom-6 md:scale-105"
+              : "md:left-10 md:bottom-5 bottom-82 scale-100 left-1"
+          } transition-all duration-700`}
         />
         <img
           src={IMGHero}
-          className="md:w-[73%] md:h-[83%] absolute"
-          style={{
-            left: `${isHovered ? "6.4rem" : "5.8rem"}`,
-            bottom: `${isHovered ? "1.25rem" : "0"}`,
-            transition: "all .7s",
-            scale: `${isHovered ? "1.04" : "1"}`,
-          }}
+          className={`md:w-[73%] md:h-[83%] absolute ${
+            isHovered
+              ? "left-24 bottom-5 scale-105"
+              : "md:left-20 md:bottom-0 bottom-82 left-1 scale-100 "
+          } transition-all duration-700`}
         />
       </div>
       <motion.div
@@ -67,11 +63,11 @@ const Hero = () => {
             achieve their goals.
           </p>
 
-          <div>
-            <button className="bg-primary py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[2px] sm:hover:border-[3px] hover:text-primary-900 border-primary">
+          <div className="flex flex-col items-start justify-start md:flex-row gap-4">
+            <button className="bg-primary py-2 px-7 rounded-3xl hover:bg-transparent transition-all text-white hover:border-[2px] sm:hover:border-[3px] hover:text-primary-900 border-primary ">
               <a href="#Projects">View Projects</a>
             </button>
-            <button className="text-primary py-2 px-7 rounded-3xl hover:px-8 hover:bg-primary border-[2px] sm:border-[3px] border-primary m-5 hover:text-white-800 transition-all">
+            <button className="text-primary py-2 px-12 rounded-3xl hover:px-14 hover:bg-primary border-[2px] sm:border-[3px] border-primary hover:text-white-800 transition-all">
               <a href="#contact">Hire Me</a>
             </button>
           </div>
