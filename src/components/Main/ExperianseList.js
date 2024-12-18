@@ -25,7 +25,7 @@ const ExperienceList = [
     title: "Python Developer",
     company: "Self-Taught",
     description:
-      "Learned Python independently through online resources and built an Information Retrieval System for the Afan Oromo language. Also solved over 150 algorithmic challenges on LeetCode, focusing on writing clean, efficient, and scalable code.",
+      "Learned Python independently through online resources and built an Information Retrieval System for the Afan Oromo language. Also solved over 80 algorithmic challenges on LeetCode, focusing on writing clean, efficient, and scalable code.",
   },
   {
     year: "2023",
