@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       >
         {Projects.map(({ id, title, description, image, href }) => (
           <div
-            className={`relative overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 ease-out ${
+            className={`relative overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 ease-out mb-11 ${
               isHovered && id === hoveredId ? "scale-105 shadow-xl" : ""
             }`}
             key={id}
