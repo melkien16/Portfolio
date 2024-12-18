@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Projects } from "./Projects";
 import { motion } from "framer-motion";
+
 const ProjectsSection = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredId, setHoveredId] = useState(null);

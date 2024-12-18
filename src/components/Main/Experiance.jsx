@@ -1,7 +1,10 @@
 import ExperianceList from "./ExperianseList";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Experiance = () => {
+  const [hoveredId, setHoveredId] = useState(null);
+
   return (
     <div
       className="bg-black-300 text-white py-16 px-8 exp-bg dark:bg-slate-200"
@@ -10,30 +13,26 @@ const Experiance = () => {
       <motion.h2
         initial={{ opacity: 0, scale: 0.99 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
-          delay: 0.1,
-          ease: "easeInOut",
-        }}
-        className="text-center text-4xl font-bold mb-12 main-title relative inline-block text-gray_gradient font-poppins hover:text-white-500 transition-all dark:text-slate-900"
+        transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }}
+        className="text-center text-4xl font-bold mb-12 main-title relative inline-block text-gray_gradient font-poppins hover:text-white-500 transition-all"
       >
         Experience
       </motion.h2>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.99 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
-          delay: 0.1,
-          ease: "easeInOut",
-        }}
+        transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }}
         className="max-w-4xl mx-auto"
       >
         {ExperianceList.map((exp, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row items-start relative mb-12 last:mb-0"
+            onMouseEnter={() => setHoveredId(index)}
+            onMouseLeave={() => setHoveredId(null)}
           >
+            {/* Timeline Circles and Lines */}
             <div className="flex flex-col items-center flex-shrink-0 w-24">
               <span className="bg-gray-700 dark:bg-slate-100 dark:text-slate-900 text-sm font-medium py-1 px-2 rounded-md">
                 {exp.year}
@@ -44,7 +43,12 @@ const Experiance = () => {
               </div>
             </div>
 
-            <div className="bg-gray-800 dark:bg-slate-100 dark:text-slate-900 rounded-lg p-6 ml-8 font-roboto">
+            {/* Experience Card */}
+            <div
+              className={`bg-gray-800 dark:bg-slate-100 dark:text-slate-900 rounded-lg transition-transform duration-300 ease-in-out ${
+                hoveredId === index ? "scale-105 shadow-xl" : "scale-100"
+              } ml-8 font-roboto p-6`}
+            >
               <h3 className="text-2xl font-semibold mb-2">{exp.title}</h3>
               <h4 className="text-xl text-primary-900 mb-4">{exp.company}</h4>
               <p className="text-lg leading-relaxed">{exp.description}</p>
