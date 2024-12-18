@@ -15,7 +15,7 @@ const Experiance = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="text-center text-4xl font-bold mb-12 main-title relative inline-block text-gray_gradient hover:text-white-500 transition-all"
+        className="text-center text-4xl font-bold mb-12 main-title relative inline-block text-gray_gradient font-poppins hover:text-white-500 transition-all dark:text-slate-900"
       >
         Experience
       </motion.h2>

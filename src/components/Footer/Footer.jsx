@@ -1,4 +1,5 @@
 import "devicon/devicon.min.css";
+import {Link} from "react-scroll";
 
 const Footer = () => {
   return (
@@ -13,29 +14,29 @@ const Footer = () => {
 
         <ul className="hidden md:flex md:space-x-8 mg:text-lg">
           <li>
-            <a href="#home" className="hover:text-primary-900">
+            <Link to="home" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" className="hover:text-primary-900">
+            <Link to="about" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
               About Me
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#skills" className="hover:text-primary-900">
+            <Link to="Skills" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
               Skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" className="hover:text-primary-900">
+            <Link to="Projects" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="hover:text-primary-900">
+            <Link to="contact" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -49,7 +50,7 @@ const Footer = () => {
             <i className="devicon-linkedin-plain"></i>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/melkien16"
             target="_blank"
             rel="noopener noreferrer"
             className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"

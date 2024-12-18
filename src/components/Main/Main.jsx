@@ -2,7 +2,7 @@ import About from "./About";
 import Hero from "./Hero";
 import Experiance from "./Experiance";
 import Skills from "./Skills";
-// import ProjectsSection from "./ProjectsSection";
+import ProjectsSection from "./ProjectsSection";
 import Contact from "./Contact";
 
 const Main = () => {
@@ -14,7 +14,7 @@ const Main = () => {
       <About />
       <Experiance />
       <Skills />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
       <Contact />
     </>
 
