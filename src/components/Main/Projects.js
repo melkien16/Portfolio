@@ -1,11 +1,11 @@
 export const Projects = [
   {
     id: 1,
-    title: "Elegant Jewelry Store",
+    title: "Fast Food Delivery App",
     description:
-      "A modern and visually captivating e-commerce platform for showcasing and selling fine jewelry.",
-    image: "/ProjectsIMG/Jewlery.png",
-    href: "https://example.com/project-alpha",
+      "An innovative and visually appealing platform for ordering and delivering fast food with ease",
+    image: "/ProjectsIMG/FastFood.png",
+    href: "https://melkiefastfood.netlify.app/",
   },
   {
     id: 2,
