@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       >
         {Projects.map(({ id, title, description, image, href }) => (
           <div
-            className={`relative overflow-hidden rounded-3xl shadow-lg transform transition-transform duration-500 ease-out mb-11 ${
+            className={`relative overflow-hidden transform ease-out mb-11 group rounded-2xl shadow-md bg-gray-800 dark:bg-gray-200 hover:shadow-xl transition-all duration-500 ${
               isHovered && id === hoveredId ? "scale-105 shadow-xl" : ""
             }`}
             key={id}
@@ -49,7 +49,7 @@ const ProjectsSection = () => {
             }}
           >
             <div
-              className="h-[384px] w-full bg-cover bg-center transition-transform duration-500 ease-in-out hover:scale-110"
+              className="h-[384px] w-full bg-cover bg-center transition-transform duration-500 ease-in-out hover:scale-110 transform group-hover:scale-110"
               style={{
                 backgroundImage: `url(${image})`,
               }}
