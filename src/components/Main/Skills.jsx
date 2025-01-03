@@ -65,12 +65,16 @@ const Skills = () => {
                     }`}
                   >
                     <div
-                      className={`w-14 h-[2px] rounded-3xl transition-all duration-300 ease-in-out ${
+                      className={`w-14 h-[8px] rounded-3xl transition-all duration-300 ease-in-out ${
                         isHovered && hoveredIndex === id
                           ? "bg-white"
                           : "bg-helper-default"
                       }`}
-                    ></div>
+                    >
+                      <div
+                        className={`w-{${"100%"}} bg-red-900 h-2 rounded-3xl`}
+                      ></div>
+                    </div>
                     <p>{name}</p>
                   </div>
                 </div>
