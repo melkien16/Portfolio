@@ -38,7 +38,7 @@ const Skills = () => {
             Languages
           </h1>
           <div className="grid grid-cols-3">
-            {Languages.map(({ id, name, className }) => {
+            {Languages.map(({ id, name, className, level }) => {
               return (
                 <div
                   key={id}
@@ -72,7 +72,8 @@ const Skills = () => {
                       }`}
                     >
                       <div
-                        className={`w-{${"100%"}} bg-red-900 h-2 rounded-3xl`}
+                        className="bg-red-900 h-2 rounded-3xl"
+                        style={{ width: level }}
                       ></div>
                     </div>
                     <p>{name}</p>
@@ -87,7 +88,7 @@ const Skills = () => {
             Libraries and Frameworks
           </h1>
           <div className="grid grid-cols-3 ">
-            {Frameworks.map(({ id, name, className }) => {
+            {Frameworks.map(({ id, name, className, level }) => {
               return (
                 <div
                   key={id}
@@ -114,12 +115,17 @@ const Skills = () => {
                     } hover:`}
                   >
                     <div
-                      className={`w-14 h-[3px] transition-all duration-300 ease-in-out ${
+                      className={`w-14 h-2 rounded-3xl transition-all duration-300 ease-in-out ${
                         isHovered && hoveredIndex === id
                           ? "bg-white"
                           : "bg-helper-default"
                       }`}
-                    ></div>
+                    >
+                      <div
+                        className="bg-red-900 h-2 rounded-3xl"
+                        style={{ width: level }}
+                      ></div>
+                    </div>
                     <p>{name}</p>
                   </div>
                 </div>
@@ -132,7 +138,7 @@ const Skills = () => {
             Tools
           </h1>
           <div className="grid grid-cols-3">
-            {Tools.map(({ id, name, className }) => {
+            {Tools.map(({ id, name, className, level }) => {
               return (
                 <div
                   key={id}
@@ -159,12 +165,17 @@ const Skills = () => {
                     } hover:`}
                   >
                     <div
-                      className={`w-14 h-[3px] transition-all duration-300 ease-in-out ${
+                      className={`w-14 h-2 rounded-3xl transition-all duration-300 ease-in-out ${
                         isHovered && hoveredIndex === id
                           ? "bg-white"
                           : "bg-helper-default"
                       }`}
-                    ></div>
+                    >
+                      <div
+                        className="bg-red-900 h-2 rounded-3xl"
+                        style={{ width: level }}
+                      ></div>
+                    </div>
                     <p>{name}</p>
                   </div>
                 </div>
