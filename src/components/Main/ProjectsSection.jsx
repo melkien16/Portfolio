@@ -8,7 +8,7 @@ const ProjectsSection = () => {
 
   return (
     <div
-      className="lg:p-28 p-6 sm:p-10 lg:pt-10 bg-gradient-to-b from-gray-800 to-black dark:from-white dark:to-gray-200"
+      className="lg:p-28 p-6 sm:p-10 lg:pt-10 bg-gradient-to-b from-gray-900 to-black dark:from-white dark:to-gray-200"
       id="Projects"
     >
       <motion.h1
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="text-gray_gradient main-title lg:m-10 m-6 relative inline-block dark:text-slate-900 font-poppins hover:text-white-500 transition-all lg:mb-20"
+        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
       >
         My Projects
       </motion.h1>

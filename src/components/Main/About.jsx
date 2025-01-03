@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div
-      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-slate-100 bg-slate-900 dark:bg-slate-200 dark:text-slate-900"
+      className="lg:px-28 px-6 lg:py-20 md:py-10 py-2 text-slate-100 bg-slate-950 dark:bg-slate-200 dark:text-slate-900"
       id="about"
     >
       <motion.h1
@@ -18,7 +18,7 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="main-title m-2 lg:m-3 relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
+        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
       >
         About
       </motion.h1>
