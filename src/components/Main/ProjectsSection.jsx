@@ -19,7 +19,7 @@ const ProjectsSection = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
+        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900 my-10"
       >
         My Projects
       </motion.h1>
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
 
             <div
               className={`absolute inset-0 dark:bg-black-100 bg-black bg-opacity-60 dark:bg-opacity-70 flex flex-col justify-center items-center p-10 transition-opacity duration-300 ${
-                isHovered && id === hoveredId ? "opacity-100" : "opacity-0"
+                isHovered && id === hoveredId ? "opacity-100" : "md:opacity-0"
               }`}
             >
               <h2 className="text-white dark:text-slate-200 text-xl lg:text-2xl font-semibold mb-4 text-center">

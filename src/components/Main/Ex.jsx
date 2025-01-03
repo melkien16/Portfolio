@@ -14,7 +14,7 @@ const Experiance = () => {
         initial={{ opacity: 0, scale: 0.99 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }}
-        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
+        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900 my-10"
       >
         Experience
       </motion.h2>
