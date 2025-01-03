@@ -37,7 +37,7 @@ const Skills = () => {
           <h1 className="my-3 text-3xl font-bold sub-title relative md:inline-block mb-8 hover:text-white-500 font-tas transition-all text-center md:ml-20 m-40">
             Languages
           </h1>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 m-2">
             {Languages.map(({ id, name, className, level }) => {
               return (
                 <div
@@ -87,7 +87,7 @@ const Skills = () => {
           <h1 className="text-3xl font-bold sub-title relative lg:ml-20  hover:text-white-500 font-tas transition-all mt-4 mb-8 text-center m-10">
             Libraries and Frameworks
           </h1>
-          <div className="grid grid-cols-3 ">
+          <div className="grid grid-cols-3 m-2">
             {Frameworks.map(({ id, name, className, level }) => {
               return (
                 <div
@@ -137,7 +137,7 @@ const Skills = () => {
           <h1 className="my-3 text-3xl font-bold sub-title relative lg:ml-20 mb-8 hover:text-white-500 font-tas transition-all text-center m-40">
             Tools
           </h1>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 m-2">
             {Tools.map(({ id, name, className, level }) => {
               return (
                 <div
