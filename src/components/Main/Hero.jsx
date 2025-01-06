@@ -39,24 +39,18 @@ const Hero = () => {
           } transition-all duration-700`}
         />
       </div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.99 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
-          delay: 0.1,
-          ease: "easeInOut",
-        }}
+      <div
+        
         className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-end items-end h-[77vh] z-40"
       >
-        <div className="lg:w-1/2 my-14 md:m-6 md:my-10 flex flex-col justify-center items-center">
-          <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1">
+        <div className="my-14 md:my-10 flex flex-col  items-center lg:absolute lg:top-52">
+          <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1 cursor-pointer">
             Hi, I&apos;m
-            <span className="lg:text-6xl text-primary-200 text-5xl font-extrabold l px-4 hover:motion-preset-focus ">
-              Melkie
+            <span className="lg:text-8xl text-primary-200 text-5xl font-extrabold l px-4 hover:motion-preset-focus ">
+              MELKIE YILK
             </span>
           </h1>
-          <p className="mb-16 lg:text-[24px] font-tas">
+          <p className="mb-14 lg:text-[24px] font-tas">
             Full-Stack Web Developer | Tech Enthusiast
           </p>
           <p className="mb-6 text-center">
@@ -78,7 +72,7 @@ const Hero = () => {
           </div>
         </div>
         {/* <div className="hidden w-3/4 h-full lg:flex items-start justify-start">
-          <motion.div className="w-full h-full flex items-start justify-start">
+          <div className="w-full h-full flex items-start justify-start">
             {/* <Leva /> */}
         {/* <Canvas className="">
               <Suspense fallback={<CanvaLoader />}>
@@ -96,7 +90,7 @@ const Hero = () => {
             </Canvas>
           </div> */}
         {/* </div> */}
-      </motion.div>
+      </div>
     </div>
   );
 };

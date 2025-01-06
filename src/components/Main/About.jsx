@@ -31,14 +31,14 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="flex flex-col-reverse lg:flex-row justify-center my-8 md:my-12 motion-preset-blur-right motion-duration-2000"
+        className="flex flex-col-reverse lg:flex-row justify-center lg:p-3 my-8 md:my-12 lg:gap-60 motion-preset-blur-right motion-duration-2000 "
       >
-        <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full">
+        <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full ">
           <div className="w-[500px] lg:mt-8">
             <h1 className="md:my-3 text-2xl  md:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all">
               Who I Am
             </h1>
-            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-1 md:hover:px-4 md:hover:py-8 hover:py-1 transition-all">
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg hover:px-1 md:hover:px-4 md:hover:py-4 hover:py-1 transition-all">
               I’m Melkie, a 3rd year Information System Student and dedicated
               Full-Stack Web Developer passionate about creating impactful and
               scalable solutions and a dedicated learner of data structures and
@@ -46,9 +46,9 @@ const About = () => {
               applications that meet user needs.
             </p>
           </div>
-          <div className="flex items-center flex-col z-40">
+          <div className="flex items-center flex-col justify-center z-40">
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
-            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-2/3 shadow-line"></div>
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000"
+        className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 lg:justify-between lg:gap-60 motion-preset-blur-right motion-duration-2000"
       >
         <div className="lg:w-1/2 ">
           <img
@@ -82,17 +82,17 @@ const About = () => {
             loading={"lazy"}
           />
         </div>
-        <div className="my-6 flex justify-center md:gap-9 gap-3 lg:w-1/2">
-          <div className="flex items-center flex-col z-40">
+        <div className="my-6 flex justify-start md:gap-9 gap-3 lg:w-1/2 ">
+          <div className="flex items-center justify-center flex-col z-40">
             <div className="w-3 h-3 bg-primary rounded-full shadow-line z-50"></div>
-            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-2/3 shadow-line"></div>
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
           <div className="w-[500px] lg:mt-8">
             <h1 className="lg:my-3 text-2xl lg:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all ml-4">
               What Drives Me
             </h1>
-            <p className="hover:border-y-[3px] hover:px-1 hover:border-primary rounded-lg lg: lg:hover:py-8 hover:py-1 transition-all">
+            <p className="hover:border-y-[3px] hover:px-1 hover:border-primary rounded-lg lg: lg:hover:py-4 hover:py-1 transition-all">
               Curiosity and innovation are at the heart of my journey. I thrive
               on mastering emerging technologies, solving complex challenges,
               and collaborating with others to build systems that truly make a
@@ -110,14 +110,14 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="flex flex-col-reverse lg:flex-row justify-center my-8 md:my-12 motion-preset-blur-right motion-duration-2000"
+        className="flex flex-col-reverse lg:flex-row justify-center my-8 md:my-12 lg:gap-60 motion-preset-blur-right motion-duration-2000"
       >
         <div className="flex justify-start lg:gap-9 gap-3 lg:w-1/2 flex-row-reverse md:flex-row w-full mt-8">
           <div className="w-[500px] lg:mt-8">
             <h1 className="md:my-3 text-2xl  md:text-3xl font-bold sub-title relative inline-block mb-4 lg:mb-8 font-tas hover:text-white-500 transition-all">
               My Mission
             </h1>
-            <p className="hover:border-y-[3px] hover:border-primary rounded-lg lg:hover:px-4 hover:px-1 lg:hover:py-8 hover:py-1 transition-all">
+            <p className="hover:border-y-[3px] hover:border-primary rounded-lg lg:hover:px-4 hover:px-1 lg:hover:py-4 hover:py-1 transition-all">
               My mission is to empower organizations by delivering solutions
               that amplify their growth and solve real-world problems. I’m
               particularly driven to create impactful systems for businesses and
@@ -125,9 +125,9 @@ const About = () => {
               expectations.
             </p>
           </div>
-          <div className="flex items-center flex-col z-40">
+          <div className="flex items-center flex-col justify-center z-40">
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
-            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-2/3 shadow-line"></div>
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
         </div>
@@ -150,7 +150,7 @@ const About = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000"
+        className="flex flex-col lg:flex-row justify-center lg:my-12 my-8 motion-preset-blur-right motion-duration-2000 lg:gap-60"
       >
         <div className="lg:w-1/2">
           <img
@@ -162,9 +162,9 @@ const About = () => {
           />
         </div>
         <div className="my-6 flex justify-center md:gap-9 gap-3 lg:w-1/2">
-          <div className="flex items-center flex-col ">
+          <div className="flex items-center flex-col justify-center z-40">
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
-            <div className="w-[3px] bg-primary h-full shadow-line"></div>
+            <div className="w-[3px] bg-primary h-2/3 shadow-line"></div>
             <div className="w-3 h-3 bg-primary rounded-full shadow-line"></div>
           </div>
           <div className="w-[500px] lg:mt-8">
@@ -172,7 +172,7 @@ const About = () => {
               Why Collaborate With Me?
             </h1>
 
-            <ul className="hover:border-y-[3px] hover:px-1 hover:border-primary rounded-lg lg: lg:hover:py-8 hover:py-1 transition-all">
+            <ul className="hover:border-y-[3px] hover:px-1 hover:border-primary rounded-lg lg: lg:hover:py-4 hover:py-1 transition-all">
               <li>
                 <span className="font-bold italic">Committed</span>, Every
                 project I take on is approached with precision and purpose
