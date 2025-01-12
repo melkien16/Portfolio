@@ -21,7 +21,7 @@ const Header = () => {
   const toggleMode = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px]  lg:text-[18px] bg-black z-50 font-poppins dark:bg-slate-200 dark:text-slate-900 fixed right-0 left-0 top-0">
+    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px]  lg:text-[18px] bg-black z-50 font-poppins dark:bg-slate-200 dark:text-slate-900 fixed right-0 left-0 top-0 md:h-20">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -37,7 +37,7 @@ const Header = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-white-800 hover:bg-primary transition-all"
+          className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-white-800 hover:bg-primary transition-all md:hidden xl:block"
         >
           <Link to="contact" smooth={true} duration={500}>
             Let&apos;s Talk
@@ -45,7 +45,7 @@ const Header = () => {
         </motion.button>
       </div>
       <div
-        className="fixed md:top-6 top-5 md:right-2 right-20"
+        className="fixed justify-center items-center md:top-6 sm:top-3 top-5 md:right-2 right-20"
         style={{
           justifyContent: "center",
           alignItems: "center",
@@ -53,7 +53,7 @@ const Header = () => {
         }}
       >
         <div
-          className="w-14 h-6 sm:w-20 sm:h-10"
+          className="w-14 sm:h-7 lg:h-8 lg:w-16 h-6 xl:w-20 xl:h-10 mr-2"
           onClick={toggleMode}
           style={{
             backgroundColor: isDarkMode ? "#444" : "#ddd",
@@ -68,7 +68,7 @@ const Header = () => {
         >
           <motion.div
             layout
-            className="w-5 h-5 sm:w-[30px] sm:h-[30px] rounded-[50%]"
+            className="w-5 h-5 xl:w-[30px] xl:h-[30px] lg:h-[24px] lg:w-[24px] rounded-[50%]"
             style={{
               backgroundColor: isDarkMode ? "#fff" : "#666",
             }}

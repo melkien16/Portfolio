@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import NavList from "./NavList";
 const NavBars = () => {
   return (
-    <div className="grid md:flex md:justify-between items-center md:gap-4 lg:gap-12">
+    <div className="grid md:flex md:justify-between items-center md:gap-4 xl:gap-12 md:mr-10">
       {NavList.map(({ title, href, id }) => {
         return (
           <div
