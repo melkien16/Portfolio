@@ -1,31 +1,27 @@
 import { Link } from "react-scroll";
 import NavList from "./NavList";
+
 const NavBars = () => {
   return (
-    <div className="grid md:flex md:justify-between items-center md:gap-4 xl:gap-12 md:mr-12">
-      {NavList.map(({ title, href, id }) => {
-        return (
-          <div
-            key={id}
-            className="hover:text-primary-500 transition-all text-[16px] lg:text-[18px] relative"
+    <nav className="grid md:flex md:justify-between items-center md:gap-6 xl:gap-12">
+      {NavList.map(({ title, href, id }) => (
+        <div
+          key={id}
+          className="relative text-[16px] lg:text-[18px] hover:text-primary-500 transition-colors duration-300"
+        >
+          <Link
+            to={href}
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="cursor-pointer nav-list"
+            activeClass="text-primary-500 font-bold"
           >
-            <Link
-              to={href}
-              smooth={true}
-              duration={500}
-              spy={true}
-              className="nav-list cursor-pointer"
-              activeStyle={{
-                color: "#8CED1F",
-                transition: "all 1s",
-              }}
-            >
-              {title}
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+            {title}
+          </Link>
+        </div>
+      ))}
+    </nav>
   );
 };
 
