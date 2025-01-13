@@ -24,18 +24,18 @@ const Hero = () => {
       >
         <img
           src={pattern}
-          className={`absolute md:w-[550px] w-52 ${
+          className={`absolute xl:w-[550px] md:w-[400px] w-72 sm:w-96 ${
             isHovered
-              ? "md:left-4 md:bottom-6 md:scale-105"
-              : "md:left-10 md:bottom-5 bottom-82 scale-100 left-1"
+              ? "md:left-0 bottom-80 left-0 sm:left-0 sm:bottom-44 sm:scale-100 xl:left-6 xl:bottom-8 md:bottom-36 md:scale-105"
+              : "xl:left-10 xl:bottom-5 md:bottom-32 bottom-80 sm:bottom-44 scale-100 left-1"
           } transition-all duration-700`}
         />
         <img
           src={IMGHero}
-          className={`md:w-[73%] md:h-[83%] absolute ${
+          className={`xl:w-[73%] md:w-[68%] xl:h-[83%] absolute ${
             isHovered
-              ? "left-24 bottom-5 scale-105"
-              : "md:left-20 md:bottom-0 bottom-82 left-1 scale-100 "
+              ? "left-1 xl:left-4 sm:left-1 sm:bottom-44 xl:bottom-2 bottom-80 scale-105"
+              : "md:left-20 xl:left-0 xl:bottom-0 md:bottom-28 bottom-80 sm:bottom-44 left-1 scale-100"
           } transition-all duration-700`}
         />
       </div>
@@ -43,10 +43,10 @@ const Hero = () => {
         
         className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-end items-end h-[77vh] z-40"
       >
-        <div className="my-14 md:my-10 flex flex-col  items-center lg:absolute lg:top-52">
+        <div className="mt-36 md:my-10 flex flex-col  items-center lg:absolute lg:top-52">
           <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1 cursor-pointer">
             Hi, I&apos;m
-            <span className="lg:text-8xl text-primary-200 text-5xl font-extrabold l px-4 hover:motion-preset-focus ">
+            <span className="lg:text-7xl text-primary-200 text-4xl font-extrabold l px-4 hover:motion-preset-focus ">
               MELKIE YILK
             </span>
           </h1>
@@ -64,7 +64,7 @@ const Hero = () => {
                 View Projects
               </Link>
             </button>
-            <button className="text-primary py-2 px-12 rounded-3xl hover:px-14 hover:bg-primary border-[2px] sm:border-[3px] border-primary hover:text-white-800 transition-all">
+            <button className="text-primary py-2 px-12 rounded-3xl hover:px-14 hover:bg-primary border-[2px] sm:border-[3px] border-primary hover:text-white-800 transition-all dark:bg-white">
               <Link to="contact" smooth={true} duration={500}>
                 Hire Me
               </Link>
