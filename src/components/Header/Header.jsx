@@ -44,9 +44,9 @@ const Header = () => {
           style={{ transition: "background-color 0.5s ease" }}
         >
           {isDarkMode ? (
-            <FaMoon className="text-yellow-400 text-2xl" />
+            <FaMoon className="hover:text-yellow-400 text-2xl hover:scale-110 text-yellow-600 transition-all duration-300" />
           ) : (
-            <FaSun className="text-yellow-400 text-2xl" />
+            <FaSun className="hover:text-yellow-400 text-2xl hover:scale-110 text-yellow-600 transition-all duration-300" />
           )}
         </div>
         <motion.button
