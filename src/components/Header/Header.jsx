@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import NavBars from "./NavBars";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { FaSun, FaMoon } from "react-icons/fa";
+
+import NavBars from "./NavBars";
+
 import Humberger from "../../assets/menu.svg";
 import Close from "../../assets/close.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const storedMode = localStorage.getItem("isDarkMode");
     return storedMode === "true";
@@ -21,81 +23,61 @@ const Header = () => {
   const toggleMode = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <div className="lg:px-28 sm:px-8 max-md:px-6 px-6 sm:py-2 py-4 flex justify-between items-center text-gray-200 max-md:text-[16px] text-[14px]  lg:text-[18px] bg-black z-50 font-poppins dark:bg-slate-200 dark:text-slate-900 fixed right-0 left-0 top-0 md:h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black dark:bg-slate-200 text-gray-200 dark:text-slate-900 font-poppins px-6 sm:px-8 lg:px-28 py-4 flex items-center justify-between shadow-md">
+      {/* Logo */}
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-primary-900 sm:font-extrabold font-bold text-white border border-primary rounded-md sm:px-3 px-1 md:text-[20px] lg:text-[24px] text-[18px] sm:text-[24px] hover:bg-transparent hover:text-primary-900 transition-all duration-100 cursor-pointer mr-4"
+        className="font-bold text-white dark:text-black text-lg sm:text-xl lg:text-2xl cursor-pointer"
       >
-        <Link to="/" smooth={true} duration={500}>
-          Melkie
+        <Link to="home" smooth={true} duration={500}>
+          Melkie{" "}
         </Link>
       </motion.div>
-      <div className="md:flex justify-end items-center gap-12 hidden">
-        <NavBars />
 
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex items-center gap-12">
+        <NavBars />
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="text-primary-900 py-1 lg:px-8 max-md:px-4 rounded-3xl hover:bg-prim-900 border-[3px] max-md:border-[2px] border-primary m-4 hover:text-white-800 hover:bg-primary transition-all md:hidden xl:block"
+          className="text-primary-900 py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition"
         >
           <Link to="contact" smooth={true} duration={500}>
             Let&apos;s Talk
           </Link>
         </motion.button>
-      </div>
+      </nav>
+
+      {/* Dark Mode Toggle */}
       <div
-        className="fixed justify-center items-center md:top-6 sm:top-3 top-5 md:right-2 right-20"
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          transition: "background-color 0.5s ease",
-        }}
+        className="flex items-center cursor-pointer"
+        onClick={toggleMode}
+        style={{ transition: "background-color 0.5s ease" }}
       >
-        <div
-          className="w-14 sm:h-7 lg:h-8 lg:w-16 h-6 xl:w-20 xl:h-10 mr-2"
-          onClick={toggleMode}
-          style={{
-            backgroundColor: isDarkMode ? "#444" : "#ddd",
-            borderRadius: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: isDarkMode ? "flex-end" : "flex-start",
-            padding: "5px",
-            cursor: "pointer",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-          }}
+        {isDarkMode ? <FaMoon className="text-yellow-400 text-2xl" /> : <FaSun className="text-yellow-400 text-2xl"/>}
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="focus:outline-none"
         >
-          <motion.div
-            layout
-            className="w-5 h-5 xl:w-[30px] xl:h-[30px] lg:h-[24px] lg:w-[24px] rounded-[50%]"
-            style={{
-              backgroundColor: isDarkMode ? "#fff" : "#666",
-            }}
+          <img
+            src={isOpen ? Close : Humberger}
+            alt="Menu Toggle"
+            className="w-8 h-8"
           />
-        </div>
+        </button>
+
+        {isOpen && (
+          <div className="absolute top-16 right-3 bg-black dark:bg-slate-200 text-white dark:text-black rounded-lg shadow-lg p-4 transition-transform transform">
+            <NavBars />
+          </div>
+        )}
       </div>
-      <div
-        className="cursor-pointer md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <div
-          className={`${
-            isOpen
-              ? "absolute top-16 right-3 bg-black-100 text-white-800 dark:bg-slate-200 dark:text-black-100 p-3 rounded-lg"
-              : "hidden"
-          } transition-all duration-700 ease-linear`}
-        >
-          <NavBars />
-        </div>
-        <img
-          src={`${isOpen ? Close : Humberger}`}
-          alt="Humberger"
-          width={30}
-          className="rounded-lg hover:bg-black-600 active:bg-black-300 transition-all duration-200"
-        />
-      </div>
-    </div>
+    </header>
   );
 };
 
