@@ -11,7 +11,6 @@ const About = () => {
       className="px-6 lg:px-16 py-10 lg:py-20 text-slate-100 bg-slate-950 dark:bg-slate-200 dark:text-slate-900"
       id="about"
     >
-      {/* Section Title */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.98, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -25,9 +24,7 @@ const About = () => {
         Who I Am
       </motion.h1>
 
-      {/* About Information */}
       <div className="m-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-        {/* Image Container */}
         <div className="relative h-[300px] w-[300px] lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px] rounded-full overflow-hidden shadow-lg">
           <img
             src={ABI}
@@ -37,7 +34,6 @@ const About = () => {
           />
         </div>
 
-        {/* About Text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,11 +54,12 @@ const About = () => {
           <span className="font-semibold text-primary-50">
             3rd-year Information Systems
           </span>{" "}
-          student. <br /> <span className="hidden lg:inline-block">
-            I specialize in creating scalable and innovative web
-            applications using the latest technologies such as React, Three.js,
-            and more. My aim is to deliver impactful solutions that solve
-            real-world problems.
+          student. <br />{" "}
+          <span className="hidden lg:inline-block">
+            I specialize in creating scalable and innovative web applications
+            using the latest technologies such as React, Three.js, and more. My
+            aim is to deliver impactful solutions that solve real-world
+            problems.
           </span>
           <br />
           <br />
@@ -71,9 +68,7 @@ const About = () => {
         </motion.p>
       </div>
 
-      {/* Values and Vision */}
       <div className="grid lg:grid-cols-2 gap-10 mt-14">
-        {/* Section 1 - Who I Am */}
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.99 }}
@@ -148,7 +143,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Section 2 - My Motivation */}
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.99 }}
@@ -196,7 +190,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Section 3 - My Mission */}
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.99 }}
@@ -244,7 +237,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Section 4 - Why Collaborate? */}
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.99 }}
