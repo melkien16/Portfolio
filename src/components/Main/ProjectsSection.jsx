@@ -8,20 +8,20 @@ const ProjectsSection = () => {
 
   return (
     <div
-      className="lg:p-28 p-6 sm:p-10 lg:pt-10 bg-gradient-to-b from-gray-900 to-black dark:from-white dark:to-gray-200"
+      className="lg:p-16 p-6 sm:p-10 lg:pt-10 bg-gradient-to-b from-gray-900 to-black dark:from-white dark:to-gray-200"
       id="Projects"
     >
       <motion.h1
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, scale: 0.98, y: 20 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{
           duration: 1.5,
-          delay: 0.1,
+          delay: 0.2,
           ease: "easeInOut",
         }}
-        className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900 my-10"
+        className="text-center my-8 text-4xl text-slate-50 mb-10 md:text-5xl lg:text-5xl xl:mb-14 font-extrabold text-transparent dark:text-slate-900 cursor-pointer tracking-wide"
       >
-        My Projects
+        Showcase of My Work
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}

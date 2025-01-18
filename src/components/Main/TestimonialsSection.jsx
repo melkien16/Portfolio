@@ -18,9 +18,18 @@ const TestimonialSlider = () => {
 
   return (
     <div className="lg:p-28 md:p-20 sm:p-14 p-10 pb-20 bg-slate-950 dark:bg-slate-200 dark:text-slate-950 text-slate-100">
-      <h1 className="main-title m-2 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900 text-2xl my-8">
+      <motion.h1
+        initial={{ opacity: 0, scale: 0.98, y: 20 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.2,
+          ease: "easeInOut",
+        }}
+        className="text-center my-8 text-4xl text-slate-50 mb-10 md:text-5xl lg:text-5xl xl:mb-14 font-extrabold text-transparent dark:text-slate-900 cursor-pointer tracking-wide"
+      >
         Words That Inspire Me
-      </h1>
+      </motion.h1>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
