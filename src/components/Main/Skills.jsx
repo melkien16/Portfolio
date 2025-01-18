@@ -8,7 +8,7 @@ const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <div
-      className="lg:p-28 p-6 lg:pt-10 pt-5 text-slate-100 bg-slate-950 dark:bg-slate-200 dark:text-slate-950"
+      className="lg:p-16 p-2 lg:pt-10 pt-5 text-slate-100 bg-slate-950 dark:bg-slate-200 dark:text-slate-950"
       id="Skills"
     >
       <motion.h1
@@ -19,7 +19,7 @@ const Skills = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="main-title m-4 my-8 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10  relative inline-block text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
+        className="text-4xl text-center font-extrabold m-4 my-8 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10 text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
       >
         Skills &amp; Technologies
       </motion.h1>
@@ -33,8 +33,8 @@ const Skills = () => {
         }}
         className="grid lg:grid-cols-3 sm:grid-cols-2 gap-7"
       >
-        <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
-          <h1 className="my-3 text-3xl font-bold sub-title relative md:inline-block mb-8 hover:text-white-500 font-tas transition-all text-center md:ml-20 m-40">
+        <div className="skill-container md:hover:border-l-2 md:hover:border-r-2 rounded-3xl md:border-primary transition-all ease-in-out">
+          <h1 className="my-3 text-3xl font-bold mb-8 hover:text-white-500 font-tas transition-all text-center md:ml-20">
             Languages
           </h1>
           <div className="grid grid-cols-3 m-2">
@@ -83,8 +83,8 @@ const Skills = () => {
             })}
           </div>
         </div>
-        <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
-          <h1 className="text-3xl font-bold sub-title relative lg:ml-20  hover:text-white-500 font-tas transition-all mt-4 mb-8 text-center m-10">
+        <div className="skill-container md:hover:border-l-2 md:hover:border-r-2 rounded-3xl md:border-primary transition-all ease-in-out">
+          <h1 className="text-3xl font-bold lg:ml-20  hover:text-white-500 font-tas transition-all mt-4 mb-8 text-center">
             Libraries and Frameworks
           </h1>
           <div className="grid grid-cols-3 m-2">
@@ -133,8 +133,8 @@ const Skills = () => {
             })}
           </div>
         </div>
-        <div className="skill-container hover:border-l-2 hover:border-r-2 rounded-3xl border-primary transition-all ease-in-out">
-          <h1 className="my-3 text-3xl font-bold sub-title relative lg:ml-20 mb-8 hover:text-white-500 font-tas transition-all text-center m-40">
+        <div className="skill-container md:hover:border-l-2 md:hover:border-r-2 rounded-3xl md:border-primary transition-all ease-in-out">
+          <h1 className="my-3 text-3xl font-bold lg:ml-20 mb-8 hover:text-white-500 font-tas transition-all text-center ">
             Tools
           </h1>
           <div className="grid grid-cols-3 m-2">
