@@ -19,9 +19,9 @@ const ProjectsSection = () => {
           delay: 0.2,
           ease: "easeInOut",
         }}
-        className="text-center my-8 text-4xl text-slate-50 mb-10 md:text-5xl lg:text-5xl xl:mb-14 font-extrabold text-transparent dark:text-slate-900 cursor-pointer tracking-wide"
+        className="text-center text-4xl dark:text-slate-950 mb-8 sm:text-4xl lg:text-6xl font-extrabold text-transparent text-white-600 cursor-pointer tracking-wide my-10"
       >
-        Showcase of My Work
+        Showcase of <br /> My Work
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}

@@ -19,7 +19,7 @@ const About = () => {
           delay: 0.2,
           ease: "easeInOut",
         }}
-        className="text-center text-slate-50 mb-8 text-5xl lg:text-6xl font-extrabold text-transparent dark:text-slate-900 cursor-pointer tracking-wide"
+        className="text-center dark:text-slate-950 mb-8 text-5xl lg:text-6xl font-extrabold text-transparent text-white-600 cursor-pointer tracking-wide"
       >
         Who I Am
       </motion.h1>
