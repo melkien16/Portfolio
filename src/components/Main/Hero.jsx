@@ -24,18 +24,18 @@ const Hero = () => {
       >
         <img
           src={pattern}
-          className={`absolute xl:w-[550px] md:w-[400px] w-72 sm:w-96 ${
+          className={`absolute xl:w-[450px] md:w-[350px] w-72 sm:w-96 ${
             isHovered
-              ? "md:left-0 bottom-80 left-0 sm:left-0 sm:bottom-44 sm:scale-100 xl:left-6 xl:bottom-8 md:bottom-36 md:scale-105"
+              ? "md:left-0 bottom-80 left-1 sm:left-2 sm:bottom-44 sm:scale-100 xl:left-6 xl:bottom-8 md:bottom-36 md:scale-105"
               : "xl:left-10 xl:bottom-5 md:bottom-32 bottom-80 sm:bottom-44 scale-100 left-1"
           } transition-all duration-700`}
         />
         <img
           src={IMGHero}
-          className={`xl:w-[73%] md:w-[68%] xl:h-[83%] absolute ${
+          className={`xl:w-[70%] md:w-[70%] w-[95%] xl:h-[80%] absolute ${
             isHovered
-              ? "left-1 xl:left-4 sm:left-1 sm:bottom-44 xl:bottom-2 bottom-80 scale-105"
-              : "md:left-20 xl:left-0 xl:bottom-0 md:bottom-28 bottom-80 sm:bottom-44 left-1 scale-100"
+              ? "left-1 md:left-32 xl:left-14 sm:bottom-44 md:bottom-32 xl:bottom-2 bottom-80 scale-105"
+              : "md:left-20 xl:left-8 xl:bottom-0 md:bottom-28 bottom-80 sm:bottom-44 left-1 scale-100"
           } transition-all duration-700`}
         />
       </div>
@@ -43,11 +43,11 @@ const Hero = () => {
         
         className="flex flex-col md:flex-col-reverse lg:flex-row md:justify-end items-end h-[77vh] z-40"
       >
-        <div className="mt-36 md:my-10 flex flex-col  items-center lg:absolute lg:top-52">
+        <div className="md:mt-36 xl:mt-16 sm:mt-36 mt-28 md:my-10 flex flex-col  items-center lg:absolute lg:top-52">
           <h1 className="text-[2rem] font-bold md:mt-7 mt-10 mb-2 md:mb-1 cursor-pointer">
-            Hi, I&apos;m
-            <span className="lg:text-7xl text-primary-200 text-4xl font-extrabold l px-4 hover:motion-preset-focus ">
-              MELKIE YILK
+            <span className="text-white dark:lg:text-slate-900 lg:text-slate-50">Hi, I&apos;m</span>
+            <span className="lg:text-7xl md:text-6xl text-primary-200 text-4xl font-extrabold l px-4 hover:motion-preset-focus ">
+              MELKIE <span className="hidden sm:inline-block">YILK</span>
             </span>
           </h1>
           <p className="mb-14 lg:text-[24px] font-tas">
