@@ -23,7 +23,7 @@ const Header = () => {
   const toggleMode = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black dark:bg-slate-200 text-gray-200 dark:text-slate-900 font-poppins px-6 sm:px-8 xl:px-28 lg:px-16 py-4 flex items-center justify-between shadow-md md:py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black dark:bg-slate-200 text-gray-200 dark:text-slate-900 font-poppins px-6 sm:px-8 xl:px-16 lg:px-16 py-4 flex items-center justify-between shadow-md md:py-5">
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -52,7 +52,7 @@ const Header = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden lg:block text-primary-900 xl:py-2 py-1 lg:px-4 px-[1px] xl-6 xl:px-8 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition"
+          className="hidden lg:block text-primary-900 xl:py-1 py-1 lg:px-4 px-[1px] 6 xl:px-8 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition"
         >
           <Link to="contact" smooth={true} duration={500}>
             Let&apos;s Talk
