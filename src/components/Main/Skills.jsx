@@ -6,11 +6,59 @@ import { motion } from "framer-motion";
 const Skills = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [spotlightStyle, setSpotlightStyle] = useState({ display: "none" });
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setSpotlightStyle({
+      left: clientX - 50, // Center the spotlight
+      top: clientY - 50,
+      display: "block",
+    });
+  };
+
+  const handleLike = (id) => {
+    setLikes((prevLikes) => {
+      const currentState = prevLikes[id];
+      return {
+        ...prevLikes,
+        [id]: {
+          count: currentState.liked
+            ? currentState.count - 1
+            : currentState.count + 1,
+          liked: !currentState.liked,
+        },
+      };
+    });
+  };
+
   return (
     <div
-      className="lg:p-16 p-2 lg:pt-10 pt-5 text-slate-100 bg-slate-950 dark:bg-slate-200 dark:text-slate-950"
-      id="Skills"
+      className="relative pt-12 lg:p-16 lg:pt-20 p-2 text-slate-100 bg-slate-950 dark:bg-slate-300 dark:text-slate-950"
+      id="skills"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() =>
+        setSpotlightStyle((prev) => ({ ...prev, display: "block" }))
+      }
+      onMouseLeave={() => setSpotlightStyle({ display: "none" })}
     >
+      <div
+        style={{
+          position: "fixed",
+          width: "150px",
+          height: "150px",
+          borderRadius: "50%",
+          background: `radial-gradient(circle, rgba(148,252,19,1) 0%, rgba(148,252,19,0.6) 50%, rgba(148,252,19,0) 100%)`,
+          pointerEvents: "none",
+          mixBlendMode: "screen",
+          filter: "blur(20px)",
+          boxShadow:
+            "0 0 50px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
+          zIndex: 10,
+          ...spotlightStyle,
+        }}
+      ></div>
+
       <motion.h1
         initial={{ opacity: 0, scale: 0.99 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -19,7 +67,7 @@ const Skills = () => {
           delay: 0.1,
           ease: "easeInOut",
         }}
-        className="text-4xl text-center font-extrabold m-4 my-8 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10 text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900"
+        className="text-4xl text-center font-extrabold m-4 my-8 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10 text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900 lg:my-8"
       >
         Skills &amp; Technologies
       </motion.h1>

@@ -7,10 +7,8 @@ import Contact from "./Contact";
 import TestimonialsSection from "./TestimonialsSection";
 
 const Main = () => {
-
-
   return (
-      <>
+    <>
       <Hero />
       <About />
       <Experiance />
@@ -19,7 +17,6 @@ const Main = () => {
       <TestimonialsSection />
       <Contact />
     </>
-
   );
 };
 

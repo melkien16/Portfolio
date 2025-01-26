@@ -1,9 +1,42 @@
+import { useState } from "react";
 import "devicon/devicon.min.css";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 const Footer = () => {
+  const [spotlightStyle, setSpotlightStyle] = useState({ display: "none" });
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setSpotlightStyle({
+      left: clientX - 50, // Center the spotlight
+      top: clientY - 50,
+      display: "block",
+    });
+  };
   return (
-    <footer className="lg:p-10 p-4 bg-black-600 text-white dark:text-slate-900 dark:bg-slate-200">
+    <footer
+      className="relative lg:p-10 p-4 bg-black-600 text-white dark:text-slate-900 dark:bg-slate-300"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() =>
+        setSpotlightStyle((prev) => ({ ...prev, display: "block" }))
+      }
+      onMouseLeave={() => setSpotlightStyle({ display: "none" })}
+    >
+      <div
+        style={{
+          position: "fixed",
+          width: "150px",
+          height: "150px",
+          borderRadius: "50%",
+          background: `radial-gradient(circle, rgba(148,252,19,1) 0%, rgba(148,252,19,0.6) 50%, rgba(148,252,19,0) 100%)`,
+          pointerEvents: "none",
+          mixBlendMode: "screen",
+          filter: "blur(20px)",
+          boxShadow:
+            "0 0 50px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
+          zIndex: 10,
+          ...spotlightStyle,
+        }}
+      ></div>
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <h2 className="text-3xl font-bold text-primary-900">Melkie Yilk</h2>
@@ -14,27 +47,52 @@ const Footer = () => {
 
         <ul className="hidden md:flex md:space-x-8 mg:text-lg">
           <li>
-            <Link to="home" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="hover:text-primary-900 cursor-pointer"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="about" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
+            <Link
+              to="/about"
+              smooth={true}
+              duration={500}
+              className="hover:text-primary-900 cursor-pointer"
+            >
               About Me
             </Link>
           </li>
           <li>
-            <Link to="Skills" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
+            <Link
+              to="Skills"
+              smooth={true}
+              duration={500}
+              className="hover:text-primary-900 cursor-pointer"
+            >
               Skills
             </Link>
           </li>
           <li>
-            <Link to="Projects" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
+            <Link
+              to="Projects"
+              smooth={true}
+              duration={500}
+              className="hover:text-primary-900 cursor-pointer"
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500} className="hover:text-primary-900 cursor-pointer">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hover:text-primary-900 cursor-pointer"
+            >
               Contact
             </Link>
           </li>
@@ -80,7 +138,9 @@ const Footer = () => {
         <p className="text-lg text-[#D1D1D1] dark:text-slate-900">
           Developed with passion and dedication.
         </p>
-        <p className="text-sm text-[#D1D1D1] dark:text-slate-900">Design & Development by Melkie</p>
+        <p className="text-sm text-[#D1D1D1] dark:text-slate-900">
+          Design & Development by Melkie
+        </p>
       </div>
     </footer>
   );

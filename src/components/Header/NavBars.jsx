@@ -1,4 +1,6 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 import NavList from "./NavList";
 
 const NavBars = () => {
@@ -9,16 +11,20 @@ const NavBars = () => {
           key={id}
           className="relative text-[16px] lg:text-[18px] hover:text-primary-500 transition-colors duration-300"
         >
-          <Link
-            to={href}
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="cursor-pointer nav-list"
-            activeClass="text-primary-500 font-bold"
-          >
-            {title}
-          </Link>
+          {href === "/home" || href === "/projects" || href === "/contact" ? (
+            <Link to={href} className="cursor-pointer nav-list">
+              {title}
+            </Link>
+          ) : (
+            <ScrollLink
+              to={href}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer nav-list"
+            >
+              {title}
+            </ScrollLink>
+          )}
         </div>
       ))}
     </nav>

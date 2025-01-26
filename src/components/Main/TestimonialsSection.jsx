@@ -15,9 +15,43 @@ import testimonials from "./Testimonials";
 
 const TestimonialSlider = () => {
   const [hoveredId, setHoveredId] = useState(null);
+  const [spotlightStyle, setSpotlightStyle] = useState({ display: "none" });
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setSpotlightStyle({
+      left: clientX - 50, // Center the spotlight
+      top: clientY - 50,
+      display: "block",
+    });
+  };
 
   return (
-    <div className="lg:p-28 md:p-20 sm:p-14 p-10 pb-20 bg-slate-950 dark:bg-slate-200 dark:text-slate-950 text-slate-100">
+    <div
+      className="relative lg:p-16 md:p-20 sm:p-14 p-10 pb-20 bg-slate-950 dark:bg-slate-200 dark:text-slate-950 text-slate-200"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() =>
+        setSpotlightStyle((prev) => ({ ...prev, display: "block" }))
+      }
+      onMouseLeave={() => setSpotlightStyle({ display: "none" })}
+    >
+      <div
+        style={{
+          position: "fixed",
+          width: "150px",
+          height: "150px",
+          borderRadius: "50%",
+          background: `radial-gradient(circle, rgba(148,252,19,1) 0%, rgba(148,252,19,0.6) 50%, rgba(148,252,19,0) 100%)`,
+          pointerEvents: "none",
+          mixBlendMode: "screen",
+          filter: "blur(20px)",
+          boxShadow:
+            "0 0 50px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
+          zIndex: 10,
+          ...spotlightStyle,
+        }}
+      ></div>
+
       <motion.h1
         initial={{ opacity: 0, scale: 0.98, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -26,7 +60,7 @@ const TestimonialSlider = () => {
           delay: 0.2,
           ease: "easeInOut",
         }}
-        className="text-center text-4xl dark:text-slate-950 sm:text-4xl lg:text-6xl font-extrabold text-transparent text-white-600 cursor-pointer tracking-wide mb-14"
+        className="text-4xl text-center font-extrabold m-4 my-8 lg:m-3 lg:ml-20 md:ml-16 sm:ml-10 text-gray_gradient hover:text-white-500 transition-all dark:text-slate-900 lg:my-8"
       >
         Words That Inspire Me
       </motion.h1>
@@ -60,7 +94,7 @@ const TestimonialSlider = () => {
               onMouseLeave={() => {
                 setHoveredId(null);
               }}
-              className={`text-center h-96 p-5 pt-8 shadow-2xl bg-slate-900 dark:bg-transparent rounded-b-full mb-20 flex flex-col justify-between pb-8 border-2 border-primary cursor-pointer transition-all duration-500 ${
+              className={`text-center h-96 p-5 pt-8 shadow-2xl bg-slate-900 dark:bg-transparent mb-20 flex flex-col justify-between pb-8 cursor-pointer transition-all duration-500 rounded-md ${
                 hoveredId === id
                   ? "bg-slate-800 dark:bg-slate-50 shadow-xl"
                   : ""

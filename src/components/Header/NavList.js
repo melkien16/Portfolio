@@ -1,7 +1,7 @@
 const NavList = [
   {
     title: "Home",
-    href: "home",
+    href: "/home",
     id: 1,
   },
   {
@@ -10,24 +10,24 @@ const NavList = [
     id: 2,
   },
   {
-    title: 'Experience',
-    href: 'Experience',
-    id: 3
+    title: "Experience",
+    href: "experience",
+    id: 3,
   },
   {
     title: "Skills",
-    href: "Skills",
+    href: "skills",
     id: 4,
   },
-  
+
   {
     title: "Projects",
-    href: "Projects",
+    href: "/projects",
     id: 5,
   },
   {
     title: "Contact",
-    href: "contact",
+    href: "/contact",
     id: 6,
   },
 ];
