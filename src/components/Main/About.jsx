@@ -4,7 +4,7 @@ import IMG from "../../assets/img2.jpg";
 import IMG2 from "../../assets/02.jpg";
 import IMG3 from "../../assets/03.png";
 import IMG4 from "../../assets/04.jpg";
-import ABI from "../../assets/abi.jpg";
+import ABI from "../../assets/p1.jpg";
 import { motion } from "framer-motion";
 
 const About = () => {

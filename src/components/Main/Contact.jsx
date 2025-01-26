@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (validateForm()) {
       alert("Form submitted successfully!");
       setFormData({ name: "", email: "", message: "" });
@@ -69,55 +69,58 @@ const Contact = () => {
         transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }}
         className="flex flex-col lg:flex-row gap-10 justify-between items-center mt-10"
       >
-        <p className="md:text-4xl text-3xl md:leading-tight text-center md:text-left font-poppins">
-          <q>
-            Every great project begins with a simple hello.
-            <br /> let&apos;s connect and create something <br /> truly{" "}
-            <span className="font-tas text-primary-900 lg:text-8xl text-6xl l">
-              special
-            </span>
-          </q>
-        </p>
-        <div className="flex flex-col gap-4 md:gap-10 text-slate-900">
-          <a
-            href="https://www.linkedin.com/in/melkie-yilk-08a862297/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
-          >
-            <i className="devicon-linkedin-plain"></i>
-            <span className="text-sm">Linkedin</span>
-          </a>
-          <a
-            href="https://github.com/melkien16"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
-          >
-            <i className="devicon-github-original"></i>
-            <span className="text-sm">Github</span>
-          </a>
-          <a
-            href="https://twitter.com/melkien_d12"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
-          >
-            <i className="devicon-twitter-original"></i>
-            <span className="text-sm">Twitter</span>
-          </a>
+        <div className="flex flex-col gap-4 lg:gap-10 xl:gap-20">
+          <p className="md:text-4xl text-3xl md:leading-tight text-center md:text-left font-poppins self-start">
+            <q>
+              Every great project begins with a simple hello.
+              <br /> let&apos;s connect and create something <br /> truly{" "}
+              <span className="font-tas text-primary-900 lg:text-8xl text-6xl l">
+                special
+              </span>
+            </q>
+          </p>
+          <div className="flex gap-4 md:gap-10 text-slate-900">
+            <a
+              href="https://www.linkedin.com/in/melkie-yilk-08a862297/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
+            >
+              <i className="devicon-linkedin-plain"></i>
+              <span className="text-sm"> Linkedin</span>
+            </a>
+            <a
+              href="https://github.com/melkien16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
+            >
+              <i className="devicon-github-original"></i>
+              <span className="text-sm"> Github</span>
+            </a>
+            <a
+              href="https://twitter.com/melkien_d12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
+            >
+              <i className="devicon-twitter-original"></i>
+              <span className="text-sm"> Twitter</span>
+            </a>
 
-          <a
-            href="https://www.facebook.com/melkien16"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
-          >
-            <i className="devicon-facebook-plain"></i>
-            <span className="text-sm">Facebook</span>
-          </a>
+            <a
+              href="https://www.facebook.com/melkien16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-white dark:text-black-100 dark:hover:text-primary-900 hover:text-primary-900"
+            >
+              <i className="devicon-facebook-plain"></i>
+              <span className="text-sm"> Facebook</span>
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 font-poppins text-lg text-slate-900">
+
+        <div className="flex flex-col gap-4 lg:gap-[48px] font-poppins text-lg text-slate-900">
           <div className="w-80 h-32 bg-black-600 text-white-800 dark:text-black-100 dark:bg-gray-300 shadow-lg rounded-lg flex flex-col items-center justify-around">
             <img src={Phone} width={40} alt="" />
             <p>+251-946-157-252</p>
@@ -134,8 +137,15 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md bg-gray-100 p-6 rounded-lg shadow-lg"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          className="w-full max-w-md dark:bg-slate-300 dark:text-slate-950 bg-slate-900 text-slate-200 p-6 rounded-lg shadow-lg"
         >
+          <input
+            type="hidden"
+            name="access_key"
+            value="8d88662d-209e-46b0-9994-1a148ad502b3"
+          />
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1" htmlFor="name">
               Name
@@ -146,7 +156,7 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none"
+              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none bg-slate-700 dark:bg-slate-50"
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.name}</p>
@@ -163,7 +173,7 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none"
+              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none bg-slate-700 dark:bg-slate-50"
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email}</p>
@@ -180,7 +190,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleInputChange}
               rows="5"
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none"
+              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none bg-slate-700 dark:bg-slate-50"
             ></textarea>
             {errors.message && (
               <p className="text-red-500 text-sm">{errors.message}</p>

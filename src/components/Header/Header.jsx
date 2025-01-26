@@ -12,13 +12,14 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const storedMode = localStorage.getItem("isDarkMode");
-    return storedMode === true;
+    return storedMode ? JSON.parse(storedMode) : false;
   });
+
   const [spotlightStyle, setSpotlightStyle] = useState({ display: "none" });
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     setSpotlightStyle({
-      left: clientX - 50, // Center the spotlight
+      left: clientX - 50,
       top: clientY - 50,
       display: "block",
     });
@@ -26,7 +27,7 @@ const Header = () => {
 
   useEffect(() => {
     document.body.classList.toggle("dark", isDarkMode);
-    localStorage.setItem("isDarkMode", isDarkMode);
+    localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
   const toggleMode = () => setIsDarkMode((prev) => !prev);
@@ -61,9 +62,7 @@ const Header = () => {
         whileTap={{ scale: 0.95 }}
         className="font-bold text-white dark:text-black text-lg sm:text-xl lg:text-2xl cursor-pointer"
       >
-        <Link to="/">
-          Melkie{" "}
-        </Link>
+        <Link to="/">Melkie </Link>
       </motion.div>
 
       <nav className="hidden md:flex items-center xl:gap-12 lg:gap-6 gap-4">
