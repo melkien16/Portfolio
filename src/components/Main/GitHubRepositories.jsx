@@ -10,7 +10,7 @@ const GitHubRepositories = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/melkien16/repos?sort=updated&per_page=5"
+          "https://api.github.com/users/melkien16/repos?sort=updated&per_page=6"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch repositories.");
@@ -64,7 +64,7 @@ const GitHubRepositories = () => {
               {repo.name}
             </h3>
             <p className="text-sm text-gray-400 dark:text-gray-600 mb-4">
-              {repo.description || "No description provided."}
+              {repo.description || `${repo.name} repository`}
             </p>
             <a
               href={repo.html_url}

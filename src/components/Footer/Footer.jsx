@@ -7,7 +7,7 @@ const Footer = () => {
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     setSpotlightStyle({
-      left: clientX - 50, // Center the spotlight
+      left: clientX - 50,
       top: clientY - 50,
       display: "block",
     });
@@ -24,15 +24,15 @@ const Footer = () => {
       <div
         style={{
           position: "fixed",
-          width: "150px",
-          height: "150px",
+          width: "100px",
+          height: "100px",
           borderRadius: "50%",
-          background: `radial-gradient(circle, rgba(148,252,19,1) 0%, rgba(148,252,19,0.6) 50%, rgba(148,252,19,0) 100%)`,
+          background: `radial-gradient(circle, rgba(148,252,19,.8) 0%, rgba(148,252,19,0.4) 50%, rgba(148,252,19,0) 100%)`,
           pointerEvents: "none",
           mixBlendMode: "screen",
           filter: "blur(20px)",
           boxShadow:
-            "0 0 50px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
+            "0 0 50px rgba(148,252,19,0.5), 0 0 70px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
           zIndex: 10,
           ...spotlightStyle,
         }}

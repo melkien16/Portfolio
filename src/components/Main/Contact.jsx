@@ -39,7 +39,6 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
     if (validateForm()) {
       alert("Form submitted successfully!");
       setFormData({ name: "", email: "", message: "" });
@@ -156,6 +155,7 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
+              required
               className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none bg-slate-700 dark:bg-slate-50"
             />
             {errors.name && (
@@ -173,6 +173,7 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
+              required
               className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none bg-slate-700 dark:bg-slate-50"
             />
             {errors.email && (
@@ -190,6 +191,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleInputChange}
               rows="5"
+              required
               className="w-full p-3 border rounded-md focus:ring-2 focus:ring-primary focus:outline-none bg-slate-700 dark:bg-slate-50"
             ></textarea>
             {errors.message && (

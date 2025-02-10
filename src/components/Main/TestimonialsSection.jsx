@@ -20,7 +20,7 @@ const TestimonialSlider = () => {
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     setSpotlightStyle({
-      left: clientX - 50, // Center the spotlight
+      left: clientX - 50,
       top: clientY - 50,
       display: "block",
     });
@@ -38,20 +38,19 @@ const TestimonialSlider = () => {
       <div
         style={{
           position: "fixed",
-          width: "150px",
-          height: "150px",
+          width: "100px",
+          height: "100px",
           borderRadius: "50%",
-          background: `radial-gradient(circle, rgba(148,252,19,1) 0%, rgba(148,252,19,0.6) 50%, rgba(148,252,19,0) 100%)`,
+          background: `radial-gradient(circle, rgba(148,252,19,.8) 0%, rgba(148,252,19,0.4) 50%, rgba(148,252,19,0) 100%)`,
           pointerEvents: "none",
           mixBlendMode: "screen",
           filter: "blur(20px)",
           boxShadow:
-            "0 0 50px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
+            "0 0 50px rgba(148,252,19,0.5), 0 0 70px rgba(148,252,19,0.5), 0 0 100px rgba(148,252,19,0.4)",
           zIndex: 10,
           ...spotlightStyle,
         }}
       ></div>
-
       <motion.h1
         initial={{ opacity: 0, scale: 0.98, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -67,7 +66,7 @@ const TestimonialSlider = () => {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
-        slidesPerView={4}
+        slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
         loop
@@ -75,7 +74,7 @@ const TestimonialSlider = () => {
           320: { slidesPerView: 1 },
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          1024: { slidesPerView: 3 },
         }}
       >
         {testimonials.map(({ id, name, feedback, image }) => (
@@ -94,7 +93,7 @@ const TestimonialSlider = () => {
               onMouseLeave={() => {
                 setHoveredId(null);
               }}
-              className={`text-center h-96 p-5 pt-8 shadow-2xl bg-slate-900 dark:bg-transparent mb-20 flex flex-col justify-between pb-8 cursor-pointer transition-all duration-500 rounded-md ${
+              className={`text-center h-[400px] md:h-96 w-full p-5 pt-8 shadow-2xl bg-slate-900 dark:bg-transparent mb-20 flex flex-col justify-between pb-8 cursor-pointer transition-all duration-500 rounded-md ${
                 hoveredId === id
                   ? "bg-slate-800 dark:bg-slate-50 shadow-xl"
                   : ""
@@ -115,7 +114,7 @@ const TestimonialSlider = () => {
                   <img
                     src={image}
                     alt={name}
-                    className="rounded-full h-16 w-16 mx-auto mb-5"
+                    className="rounded-full h-24 w-24 mx-auto mb-5"
                   />
                 </div>
                 <h3 className="font-tas">{name}</h3>
